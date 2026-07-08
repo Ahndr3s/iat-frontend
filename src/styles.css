@@ -1,10 +1,11 @@
+@import "tailwindcss";
+
 body {
-  margin: 0;
+  /* margin: 0; */
   background: linear-gradient(#601875, #102172);
 }
 
 :root {
-  font-family: roboto, sans-serif, Inter, system-ui, Avenir, Helvetica, Arial;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -248,7 +249,8 @@ textarea {
   background: linear-gradient(#601875, #102172);
 }
 
-.dialog-header, .header-inst-icon {
+.dialog-header,
+.header-inst-icon {
   display: flex;
 }
 
@@ -258,7 +260,7 @@ textarea {
 
 .header-inst-icon {
   align-items: center;
-  justify-content: space-evenly;  
+  justify-content: space-evenly;
 }
 
 .header-inst-icon a {
@@ -289,7 +291,8 @@ textarea {
   display: grid;
 }
 
-.instPost-img, .instPost-video{
+.instPost-img,
+.instPost-video {
   width: 490px;
   height: 350px;
 }
@@ -310,7 +313,6 @@ textarea {
   padding-top: 3hv;
 }
 /*----------------Footer styles ends----------------*/
-
 
 /*----------------Responsive styles starts----------------*/
 @media only screen and (max-width: 600px) {
@@ -448,28 +450,28 @@ textarea {
     grid-template-columns: auto auto;
   }
 
-  
   .instPic,
   .instVideo {
     width: 170px;
     height: 200px;
     margin-left: 6px;
-    margin-right: 6px;    
+    margin-right: 6px;
   }
   /*---------------- Responsive InstMatrix styles ends----------------*/
 
   /*----------------instPost Dialog styles starts----------------*/
-.instPost {
-  display: grid;
-  justify-content: space-around;
-}
+  .instPost {
+    display: grid;
+    justify-content: space-around;
+  }
 
-.instPost-img, .instPost-video {
-  width: 300px;
-  height: 300px;
-}
+  .instPost-img,
+  .instPost-video {
+    width: 300px;
+    height: 300px;
+  }
 
-/*----------------instPost Dialog styles ends----------------*/
+  /*----------------instPost Dialog styles ends----------------*/
 
   /*----- Responsive Login starts-----*/
   .login-form {
