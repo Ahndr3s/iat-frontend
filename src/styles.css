@@ -62,7 +62,7 @@ textarea {
 /*----------------Form styles ends----------------*/
 
 /*----------------Common card styles starts----------------*/
-.serv-card,
+/* .serv-card, */
 .team-card {
   display: grid;
   width: 570px;
@@ -343,12 +343,12 @@ textarea {
     display: grid;
   }
 
-  .serv-card {
+  /* .serv-card {
     width: 20rem;
-  }
+  } */
 
   .serv-card-img {
-    width: 18rem;
+    /* width: 18rem; */
   }
 
   .serv-btn {
