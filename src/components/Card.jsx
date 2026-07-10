@@ -26,24 +26,24 @@ export const Card = forwardRef((props, ref) => {
   const dispatch = useDispatch();
 
   // COURSE INSCIPTION
-  const handleClickCourse = () => {
-    window.open("https://wa.me/message/W54JEKQVCRT7J1");
-  };
+  // const handleClickCourse = () => {
+  //   window.open("https://wa.me/message/W54JEKQVCRT7J1");
+  // };
 
   // TEAM MEMBER WINDOW
-  const handleClickTeamMember = (id) => {
-    navigate(`/teamMember/${id}`, {
-      replace: true,
-      state: {type: props.type}
-    });
-  };
+  // const handleClickTeamMember = (id) => {
+  //   navigate(`/teamMember/${id}`, {
+  //     replace: true,
+  //     state: { type: props.type },
+  //   });
+  // };
 
   // COURSE WINDOW
   const handleClickCourseDetails = (props) => {
     dispatch(onSetActiveCourse(props));
     navigate(`/coursePage/${props.id}`, {
       replace: true,
-      state: {type: props.type}
+      state: { type: props.type },
     });
   };
 
@@ -53,15 +53,15 @@ export const Card = forwardRef((props, ref) => {
   };
 
   // SERVICES WINDOW
-  const handleClickServ = () => {
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    } else {
-      navigate(props.pageRoute, {
-        replace: true,
-      });
-    }
-  };
+  // const handleClickServ = () => {
+  //   if (ref && ref.current) {
+  //     ref.current.scrollIntoView({ behavior: "smooth" });
+  //   } else {
+  //     navigate(props.pageRoute, {
+  //       replace: true,
+  //     });
+  //   }
+  // };
 
   // OPEN DELETE COURSE MODEL
   const handleDelete = (post) => {
@@ -113,25 +113,24 @@ export const Card = forwardRef((props, ref) => {
   switch (props.type) {
     //SERVICE CARD
     case 1:
-      cardOption = (
-        <div className="serv-card">
-          {/* <img className="serv-card-img" src={imgUrl} /> */}
-          <img className="serv-card-img" src={props.img} />
-          <br />
-          <h2 className="serv-title">{props.title}</h2>
-          <div className="card-info">
-            <p>{props.resume}</p>
-            <ul>
-              {props.info.map((data) => {
-                return <li key={data}>{data}</li>;
-              })}
-            </ul>
-          </div>
-          <button className="serv-btn" onClick={handleClickServ}>
-            {props.btntxt}
-          </button>
-        </div>
-      );
+      // cardOption = (
+      // <div className="serv-card">
+      //   <img className="serv-card-img" src={props.img} />
+      //   <br />
+      //   <h2 className="serv-title">{props.title}</h2>
+      //   <div className="card-info">
+      //     <p>{props.resume}</p>
+      //     <ul>
+      //       {props.info.map((data) => {
+      //         return <li key={data}>{data}</li>;
+      //       })}
+      //     </ul>
+      //   </div>
+      //   <button className="serv-btn" onClick={handleClickServ}>
+      //     {props.btntxt}
+      //   </button>
+      // </div>
+      // );
       break;
 
     //COURSE CARD
@@ -155,7 +154,6 @@ export const Card = forwardRef((props, ref) => {
               </p>
             </div>
             <div className="c-info">
-
               <ul className="c-list">
                 {props.info.map((data) => {
                   return <li key={data}>{data}</li>;
@@ -167,7 +165,13 @@ export const Card = forwardRef((props, ref) => {
             </button>
             <button
               className="serv-btn"
-              onClick={() => handleClickCourseDetails({ ...props, id: props.id, user: props.user })}
+              onClick={() =>
+                handleClickCourseDetails({
+                  ...props,
+                  id: props.id,
+                  user: props.user,
+                })
+              }
             >
               Ver Más
             </button>

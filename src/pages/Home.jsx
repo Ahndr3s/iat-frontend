@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import { ResourceDesign } from "./ResourceDesign";
-import { ServPage } from "./ServPage";
-import {ServCards} from "../components/ServCards";
+// import { ResourceDesign } from "./ResourceDesign";
+// import { ServPage } from "./ServPage";
+import { ServCards } from "../components/cards/ServCards";
 import "./HomeStyles.css";
 import "./ResourceDesignStyles.css";
 import "./ServPageStyle.css";
@@ -30,13 +30,13 @@ export const Home = () => {
 
       <div className="home-txt pt-5">
         <h2 className="home-title text-2xl py-3">Conoce a IA Tutores</h2>
-        <p className="home-p text-[21]">
+        <p className="home-p text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
           Somos IA tutores, una empresa dedicada al coaching educativo. Nuestro
           compromiso es brindar un servicio de calidad que potencie el
           desarrollo académico y personal de maestros y estudiantes.
         </p>
         <br />
-        <p className="home-p text-[21]">
+        <p className="home-p pb-4 text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
           Con un equipo de profesionales altamente capacitados, nos esforzamos
           por ofrecer un acompañamiento integral que impulse el éxito y el
           crecimiento de cada uno de nuestros clientes. En IA tutores, nos
@@ -44,14 +44,15 @@ export const Home = () => {
           excelencia educativa.
         </p>
 
-        <p className="home-p  text-[21]">
+        <p className="home-p text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
           En IA Tutores, más que una empresa, somos una comunidad dedicada al
           triunfo educativo.
         </p>
       </div>
 
-      <div className="serv-cards grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
-        <ServCards className="my-4 max-w-sm overflow-hidden px-2"
+      <div className="serv-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <ServCards
+          className="my-4 max-w-sm overflow-hidden px-2"
           title="Consultoría en Gestión Escolar: Estrategias para el Éxito"
           resume="Eleva tu institución con nuestra consultoría especializada en gestión escolar. Aprende y aplica estrategias efectivas que no solo mejorarán tus proyectos escolares, sino que también los llevarán a un nuevo nivel de excelencia y eficiencia."
           btntxt={`Ver Más`}
@@ -60,7 +61,8 @@ export const Home = () => {
           img={iat_consultores}
         />
 
-        <ServCards className="my-4 max-w-sm overflow-hidden px-2"
+        <ServCards
+          className="my-4 max-w-sm overflow-hidden px-2"
           title="Diseño de Recursos Educativos: Innovación a tu Alcance"
           resume="Descubre nuestro extenso catálogo de recursos educativos, cada uno diseñado para enriquecer tu práctica docente y administrativa"
           info={[
@@ -73,7 +75,8 @@ export const Home = () => {
           img={iat_recursos}
         />
 
-        <ServCards className=" my-4 max-w-sm overflow-hidden px-2 md:col-[1/span_2]"
+        <ServCards
+          className=" my-4 max-w-sm overflow-hidden px-2 md:col-[1/span_2]"
           title="Talleres y Cursos: de Aprendizaje a tu Medida"
           resume="En IA Tutores ofrecemos talleres y cursos, online y presenciales, diseñados para adaptarse a tus necesidades y convertir cada sesión en una experiencia enriquecedora hacia el conocimiento:"
           info={[

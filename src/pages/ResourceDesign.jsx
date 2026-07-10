@@ -2,7 +2,6 @@ import { forwardRef, useEffect, useState } from "react";
 import "./ResourceDesignStyles.css";
 import PropTypes from "prop-types";
 
-
 export const ResourceDesign = forwardRef((props, ref) => {
   const lobe1 = `../../assets/lobe1.png`;
   const lobe2 = `../../assets/lobe2.png`;
@@ -32,12 +31,12 @@ export const ResourceDesign = forwardRef((props, ref) => {
 
   return (
     <>
-      <div className="serv-title" ref={ref}>
-        <h1 className="titles">Diseño de Recursos Educativos</h1>
+      <div className="serv-title mt-25" ref={ref}>
+        <h1 className="titles text-2xl mb-8">Diseño de Recursos Educativos</h1>
       </div>
 
       <div className="home-txt">
-        <p className="home-p">
+        <p className="home-p pb-4 text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
           En este espacio, convergen dos pilares fundamentales: el diseño
           centrado en el estudiante y la integración de la inteligencia
           artificial como herramienta facilitadora del aprendizaje. Nos
@@ -45,7 +44,7 @@ export const ResourceDesign = forwardRef((props, ref) => {
           en IA trabajan en conjunto para crear recursos educativos efectivos y
           adaptativos.
         </p>
-        <p className="home-p">
+        <p className="home-p pb-4 text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
           Nuestro enfoque se basa en la comprensión profunda de las necesidades
           y estilos de aprendizaje de los estudiantes, así como en la aplicación
           de metodologías docentes innovadoras. Utilizamos técnicas de IA para
@@ -54,8 +53,8 @@ export const ResourceDesign = forwardRef((props, ref) => {
           impacto del aprendizaje.
         </p>
 
-        <div className="brain">
-          <h2 className="subtitle">Modelo de Diseño</h2>
+        <div className="brain mt-4">
+          <h2 className="text-xl">Modelo de Diseño</h2>
           <hr />
           <div className="superior-lobes">
             {/* <div className="high-lobe" style={{ background: `url(${lobe1}), linear-gradient(90deg, #f82f5c, #f66c49, #650577)` }}> */}

@@ -13,9 +13,9 @@ export const Contact = () => {
 
   return (
     <>
-      <h1 className="page-title">Contáctanos</h1>
+      <h1 className="page-title pt-25">Contáctanos</h1>
       <div className="socials-container">
-        <h2 className="socials-subtitle">Únete a la comunidad</h2>
+        <h2 className="socials-subtitle text-2xl">Únete a la comunidad</h2>
         <div className="socials-icons">
           <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="3x" />
@@ -29,17 +29,19 @@ export const Contact = () => {
         </div>
       </div>
 
-      <h2>Casos de éxito</h2>
+      <h2 className="text-2xl p-4 md:mx-8">Casos de éxito</h2>
       <div className="testimony-container">
         <div className="testimony-res">
           <img
-            className="res-img"
+            className="res-img max-w-sm h-48 rounded-t-lg"
             src="https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732864871/gzenotjwhjb8cssi0qrx.png"
           />
-          <div className="res-header">
-            <p className="res-title">Conoce a Gaby Lemus, estudiante de Medicina</p>
-            <p className="res-date">Septiembre 2024</p>
-            <p className="res-txt">
+          <div className="res-header mx-8">
+            <p className="res-title mt-3">
+              Conoce a Gaby Lemus, estudiante de Medicina
+            </p>
+            <p className="res-date mb-3">Septiembre 2024</p>
+            <p className="res-txt text-xl">
               Gaby Lemus, aficionada del diseño UX/UI, ha revolucionado su
               enfoque creativo tras completar nuestro curso de automatización en
               la vida diaria.
@@ -51,7 +53,7 @@ export const Contact = () => {
             "Una sesión productiva y de aprendizaje; los agentes educativos
             necesitamos actualizarnos en el uso de la tecnología."
           </p>
-          <div className="quoted">
+          <div className="quoted ml-4">
             <p className="quoted-txt">Gaby Lemus // México</p>
             <img
               className="quoted-img"

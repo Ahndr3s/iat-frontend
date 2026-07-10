@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
-import { Card } from "./Card";
+// import { Card } from "./Card";
 import { getContentsByType } from "../helpers/getContents";
+import { TeamCard } from "./cards/TeamCard";
 
 export const ContentList = (props) => {
-  const contents = getContentsByType(props.contents, props.contentType, props.limit);
+  const contents = getContentsByType(
+    props.contents,
+    props.contentType,
+    props.limit,
+  );
   let cardList = [];
   let combinedProps;
 
@@ -11,26 +16,29 @@ export const ContentList = (props) => {
     // Definir las props específicas para '2', '3', y '4'
     let additionalProps = {};
 
-    if (props.contentType === "2") { //COURSES 
-      additionalProps = {        
+    if (props.contentType === "2") {
+      //COURSES
+      additionalProps = {
         info: content.info,
         Coursedata: content.Coursedata,
         resume: content.resume,
         // Más props específicas para COURSES
       };
-    } else if (props.contentType === "3") { //TEAM MEMBERS
-      additionalProps = {      
+    } else if (props.contentType === "3") {
+      //TEAM MEMBERS
+      additionalProps = {
         resume: content.resume,
         btntxt: content.btntxt,
         email: content.email,
         role: contents.role,
-        info: content.info
+        info: content.info,
         // Más props específicas para TEAM MEMBERS
       };
-    } else if (props.contentType === "4") { //VIDEOS
+    } else if (props.contentType === "4") {
+      //VIDEOS
       additionalProps = {
         url: content.url,
-        user: content.user
+        user: content.user,
         // Más props específicas para VIDEOS
       };
     }
@@ -45,12 +53,33 @@ export const ContentList = (props) => {
         ...additionalProps,
       };
     } else {
-      combinedProps = props.childrenImgs
+      combinedProps = props.childrenImgs;
     }
 
     // Agrega el componente Card a la lista
-    cardList.push(<Card {...combinedProps} key={content.id} />);
+    switch (Number(props.contentType)) {
+      case 1:
+        console.log("servCard");
 
+        break;
+      case 2:
+        console.log("courseCard");
+        break;
+      case 3:
+        // console.log("teamCard");
+        cardList.push(
+          <TeamCard
+            className="my-4 mx-4 max-w-base overflow-hidden px-2"
+            {...combinedProps}
+            key={content.id}
+          />,
+        );
+        break;
+
+      default:
+        break;
+    }
+    // cardList.push(<Card {...combinedProps} key={content.id} />);
   });
 
   // Si listType es '1', devuelve el array de componentes Card
@@ -58,7 +87,7 @@ export const ContentList = (props) => {
     return cardList;
     // console.log(cardList)
   }
-  
+
   // En cualquier otro caso, renderiza los componentes Card directamente
   return <>{cardList}</>;
 };
@@ -68,5 +97,5 @@ ContentList.propTypes = {
   contentType: PropTypes.string,
   limit: PropTypes.number,
   listType: PropTypes.string,
-  childrenImgs: PropTypes.array
+  childrenImgs: PropTypes.array,
 };

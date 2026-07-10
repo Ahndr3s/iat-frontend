@@ -2,21 +2,20 @@ import { forwardRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./ServPageStyle.css";
 
-
 export const ServPage = forwardRef((props, ref) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <>
-      <div className="serv-title" ref={ref}>
-        <h1 className="titles">Consultoría en Gestión Escolar</h1>
+      <div className="serv-title mt-25" ref={ref}>
+        <h1 className="titles text-2xl mb-8">Consultoría en Gestión Escolar</h1>
       </div>
 
       <div className="home-txt">
-        <p className="home-p">
-          En IATutores, fusionamos tecnología de vanguardia, como la
+        <p className="home-p text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
+          En IA Tutores, fusionamos tecnología de vanguardia, como la
           Inteligencia Artificial, con métodos de educación docente probados
           para ofrecer soluciones innovadoras a instituciones educativas.
           Nuestro enfoque se centra en optimizar la gestión escolar para mejorar
@@ -25,11 +24,11 @@ export const ServPage = forwardRef((props, ref) => {
         </p>
       </div>
 
-      <div className="serv-list-container">
-        <div className="spec-serv-container">
-          <h2 className="serv-subtitle">Servicios Especializados</h2>
+      <div className="serv-list-container ">
+        <div className="spec-serv-container ">
+          <h2 className="serv-subtitle pb-4">Servicios Especializados</h2>
 
-          <ol className="spec-serv-list">
+          <ul className="list-disc text-xl py-2 mx-6">
             <li className="spec-serv">
               Implementación de tecnología avanzada en gestión escolar.
             </li>
@@ -43,9 +42,9 @@ export const ServPage = forwardRef((props, ref) => {
               Talleres y cursos enfocados en el uso de IA para directivos y
               docentes
             </li>
-          </ol>
+          </ul>
         </div>
-        <p className="home-p">
+        <p className="home-p text-xl mx-12 pt-4 pb-4 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
           Como expertos en materia de educación ofrecemos un conjunto de
           servicios enfoncados a identificar necesidades y proponer soluciones
           satisfatorias e integras para cualquier problemática didáctica en su

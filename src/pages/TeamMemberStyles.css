@@ -1,5 +1,5 @@
 .wrapper {
-  position:relative;
+  position: relative;
 }
 
 .page-header {
@@ -18,7 +18,8 @@
   margin-bottom: 0%;
 }
 
-.team-titles .team-name, .team-titles {
+.team-titles .team-name,
+.team-titles {
   margin-right: 6rem;
 }
 
@@ -53,17 +54,19 @@
   text-align: justify;
   margin-right: 6rem;
   margin-top: 3rem;
+  row-gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 @media only screen and (max-width: 600px) {
   .team-titles {
     margin-top: 0%;
-    margin-bottom: 15vh;
+    margin-bottom: 13vh;
   }
 
-  
-  .team-titles .team-name, .team-titles {
-    margin-right: unset;    
+  .team-titles .team-name,
+  .team-titles {
+    margin-right: unset;
   }
 
   .info-container {
@@ -76,13 +79,12 @@
   }
 
   .team-img {
-    margin-top: 24vh;
     margin-left: 5rem;
     width: 60%;
     height: 30vh;
   }
-  
-  .team-member-info {    
+
+  .team-member-info {
     min-width: unset;
     margin-left: 3rem;
     margin-right: 3rem;

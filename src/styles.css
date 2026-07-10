@@ -27,7 +27,6 @@ body {
   line-height: 1;
   color: #fff;
   letter-spacing: 10px;
-  margin-bottom: 50px;
 }
 
 /*----------------Form styles stars----------------*/
@@ -62,16 +61,6 @@ textarea {
 /*----------------Form styles ends----------------*/
 
 /*----------------Common card styles starts----------------*/
-/* .serv-card, */
-.team-card {
-  display: grid;
-  width: 570px;
-  justify-self: center;
-  border-radius: 10px;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  animation: fadeIn 1.5s ease-out forwards;
-}
 
 @keyframes fadeIn {
   0% {
@@ -86,7 +75,6 @@ textarea {
   display: grid;
 }
 
-.serv-btn,
 .edit-btn,
 .del-btn {
   height: 2rem;
@@ -102,10 +90,6 @@ textarea {
 .del-btn {
   width: 3rem;
   margin-top: 1rem;
-}
-
-.serv-btn {
-  width: 12rem;
 }
 
 /*----------------Common card styles ends----------------*/
@@ -206,7 +190,7 @@ textarea {
   flex-direction: column;
 }
 
-.videoblog-banner-card .serv-title {
+.videoblog-banner-card {
   font-size: 20px;
   color: #cca1dc;
 }
@@ -333,29 +317,6 @@ textarea {
   }
   /*-----Responsive Form ends-----*/
 
-  /*-----Responsive Cards starts-----*/
-  .team-card {
-    width: 20rem;
-    height: fit-content;
-  }
-
-  .team-card-body {
-    display: grid;
-  }
-
-  /* .serv-card {
-    width: 20rem;
-  } */
-
-  .serv-card-img {
-    /* width: 18rem; */
-  }
-
-  .serv-btn {
-    width: 10rem;
-  }
-  /*----- Responsive Cards ends-----*/
-
   /*----- Responsive Slider sarts-----*/
   .slide {
     width: 300px;
@@ -432,7 +393,7 @@ textarea {
     height: 400px;
   }
 
-  .videoblog-banner-card .serv-title {
+  .videoblog-banner-card {
     font-size: 15px;
   }
   /*----------------Responsive News Banner styles ends----------------*/
