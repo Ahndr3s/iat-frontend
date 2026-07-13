@@ -1,4 +1,76 @@
 export const contents = [
+  {
+  "id": "674968e23af3d53539b8fa98",
+  "type": 2,
+  "name": "Inteligencia Artificial para Docentes",
+  "btntxt": "Inscribirse",
+  "Coursedata": [
+    "24/04/2024",
+    "7:00 -9:00",
+    "-"
+  ],
+  "resume": "Partimos desde cero a los conceptos esenciales, descubres las capacidades, funciones y limitantes de chatGPT, exploración de herramientas de IA para la docencia. \n",
+  "info": [
+    "Fundamentos de IA",
+    "chat GPT 360°",
+    "Diseño de Planeaciones con Prompts Engenieering"
+  ],
+  "img": "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732864871/gzenotjwhjb8cssi0qrx.png",
+  "user": "6749688c3af3d53539b8fa8a"
+},
+{
+  "id":"67496d083af3d53539b8fac8",
+  "type": 2,
+  "name": "Automatización de Inscrpciones Escolares con Microsoft Apps",
+  "btntxt": "Inscribirse",
+  "Coursedata": [
+    "2:00",
+    "8/03/2024",
+    "Zoom"
+  ],
+  "resume": "El taller está diseñado para capacitar al personal administrativo y docente en el uso de aplicaciones de Microsoft como Excel, Power Automate, Forms y Share Point para crear un sistema de insrcipciones.",
+  "info": [
+    "Aprendizajes de Herramientas de Microsfot"
+  ],
+  "img": "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732865299/wrrqjmxkqqqav9d1twcj.png",
+  "user": "6749688c3af3d53539b8fa8a"
+  
+},
+{
+  "id": "67496e923af3d53539b8fae5",
+  "type": 2,
+  "name": "Taller del uso didáctico del cubo RUBIK",
+  "btntxt": "Inscribirse",
+  "Coursedata": [
+    "4:00",
+    "16/03/2024",
+    "Jaime Sabines "
+  ],
+  "resume": "",
+  "info": [
+    "Introducción a la Cultura RUBIK\nBeneficios del cubo RUBIK\nAprendizaje Basado en Proyectos:  Fundamentación de la propuiesta didáctica\nClase práctica y demostrraciónb del cubo RUBIK\n"
+  ],
+  "img": "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732865714/brikf2mhsslge9ido3ho.png",
+  "user": "6749688c3af3d53539b8fa8a"
+
+},
+{
+  "id":"67496fcd3af3d53539b8fb01",
+  "type": 2,
+  "name": "Diseño y Elaboración de Planeaciones Educativas",
+  "btntxt": "Inscribirse",
+  "Coursedata": [
+    "3:00",
+    "PROXIMAMENTE",
+    "-"
+  ],
+  "resume": "",
+  "info": [
+    "Fortalece competencias profesionales necesarias en los docentes para diseñar y argumentar una planeación didáctica\nIncluye instrumentos de evaluación "
+  ],
+  "img": "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732866006/gog6geigvpiq9sieuhqp.png",
+  "user": "6749688c3af3d53539b8fa8a"
+},
     {
       type:'3',
       id: "c-Alberto",

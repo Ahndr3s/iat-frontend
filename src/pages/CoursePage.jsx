@@ -24,7 +24,7 @@ export const CoursePage = () => {
   } else if (type === 4) {
     content = getConsultorById(type, videos, id);
   }
-  // console.dir(content);
+  console.dir(content);
   return (
     <>
       <div className="course-wrapper">

@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 // import { Card } from "./Card";
 import { getContentsByType } from "../helpers/getContents";
 import { TeamCard } from "./cards/TeamCard";
+import { CourseCard } from "./cards/CourseCard";
+
 
 export const ContentList = (props) => {
   const contents = getContentsByType(
@@ -17,6 +19,7 @@ export const ContentList = (props) => {
     let additionalProps = {};
 
     if (props.contentType === "2") {
+      // console.log("courseCard");
       //COURSES
       additionalProps = {
         info: content.info,
@@ -25,6 +28,7 @@ export const ContentList = (props) => {
         // Más props específicas para COURSES
       };
     } else if (props.contentType === "3") {
+      // console.log("teamCard");
       //TEAM MEMBERS
       additionalProps = {
         resume: content.resume,
@@ -35,6 +39,7 @@ export const ContentList = (props) => {
         // Más props específicas para TEAM MEMBERS
       };
     } else if (props.contentType === "4") {
+      // console.log("videoCard");
       //VIDEOS
       additionalProps = {
         url: content.url,
@@ -59,11 +64,17 @@ export const ContentList = (props) => {
     // Agrega el componente Card a la lista
     switch (Number(props.contentType)) {
       case 1:
-        console.log("servCard");
-
+        // console.log("servCard");
         break;
       case 2:
-        console.log("courseCard");
+        // console.log("courseCard");
+        cardList.push(
+          <CourseCard
+            className="my-4 mx-4 max-w-base overflow-hidden px-2"
+            {...combinedProps}
+            key={content.id}
+          />,
+        );
         break;
       case 3:
         // console.log("teamCard");

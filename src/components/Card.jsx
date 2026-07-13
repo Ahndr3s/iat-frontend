@@ -39,13 +39,13 @@ export const Card = forwardRef((props, ref) => {
   // };
 
   // COURSE WINDOW
-  const handleClickCourseDetails = (props) => {
-    dispatch(onSetActiveCourse(props));
-    navigate(`/coursePage/${props.id}`, {
-      replace: true,
-      state: { type: props.type },
-    });
-  };
+  // const handleClickCourseDetails = (props) => {
+  //   dispatch(onSetActiveCourse(props));
+  //   navigate(`/coursePage/${props.id}`, {
+  //     replace: true,
+  //     state: { type: props.type },
+  //   });
+  // };
 
   // VIDEOBLOG LINK
   const handleVideoblogClick = (url) => {
@@ -64,51 +64,51 @@ export const Card = forwardRef((props, ref) => {
   // };
 
   // OPEN DELETE COURSE MODEL
-  const handleDelete = (post) => {
-    // console.log(post);
-    if (post.type === 2) {
-      console.log("delete course");
-      dispatch(onSetActiveCourse(post));
-    } else if (post.type === 4) {
-      console.log("delete video");
-      dispatch(onSetActiveVideo(post));
-    }
-    setdeletingModal(true);
-  };
+  // const handleDelete = (post) => {
+  //   // console.log(post);
+  //   if (post.type === 2) {
+  //     console.log("delete course");
+  //     dispatch(onSetActiveCourse(post));
+  //   } else if (post.type === 4) {
+  //     console.log("delete video");
+  //     dispatch(onSetActiveVideo(post));
+  //   }
+  //   setdeletingModal(true);
+  // };
 
   // OPEN EDITION COURSE MODAL
-  const openModal = (post) => {
-    if (post.type === 2) {
-      dispatch(onSetActiveCourse(post));
-      // console.dir(post);
-      setModal(true);
-    } else if (post.type === 4) {
-      dispatch(onSetActiveVideo(post));
-      // console.dir(post);
-      setvideoModal(true);
-    }
-  };
+  // const openModal = (post) => {
+  //   if (post.type === 2) {
+  //     dispatch(onSetActiveCourse(post));
+  //     // console.dir(post);
+  //     setModal(true);
+  //   } else if (post.type === 4) {
+  //     dispatch(onSetActiveVideo(post));
+  //     // console.dir(post);
+  //     setvideoModal(true);
+  //   }
+  // };
 
   // CLOSE EDITION COURSE MODAL
-  const closeModal = (option) => {
-    if (option === 2) {
-      setModal(false);
-      dispatch(onSetActiveCourse(null));
-    } else if (option === 4) {
-      setvideoModal(false);
-      dispatch(onSetActiveVideo(null));
-    }
-  };
+  // const closeModal = (option) => {
+  //   if (option === 2) {
+  //     setModal(false);
+  //     dispatch(onSetActiveCourse(null));
+  //   } else if (option === 4) {
+  //     setvideoModal(false);
+  //     dispatch(onSetActiveVideo(null));
+  //   }
+  // };
 
   // CLOSE DELETE COURSE MODAL
-  const closeDeletingModal = (option) => {
-    setdeletingModal(false);
-    if (option === 2) {
-      dispatch(onSetActiveCourse(null));
-    } else if (option === 4) {
-      dispatch(onSetActiveVideo(null));
-    }
-  };
+  // const closeDeletingModal = (option) => {
+  //   setdeletingModal(false);
+  //   if (option === 2) {
+  //     dispatch(onSetActiveCourse(null));
+  //   } else if (option === 4) {
+  //     dispatch(onSetActiveVideo(null));
+  //   }
+  // };
 
   switch (props.type) {
     //SERVICE CARD

@@ -8,11 +8,11 @@ export const getContentsByType = (collection, contentType, limit) => {
   }
   
   // Filtra el contenido por el tipo especificado
-  if(contentType === '3'){
+  // if(contentType === '3'){
     filteredContents = contents.filter((content) => String(content.type) === contentType);
-  } else {
-    filteredContents = collection.filter((content) => String(content.type) === contentType);
-  }
+  // } else {
+    // filteredContents = collection.filter((content) => String(content.type) === contentType);
+  // }
   
   // Si se proporciona un límite, devuelve los últimos 'limit' registros
   if (limit !== undefined) {

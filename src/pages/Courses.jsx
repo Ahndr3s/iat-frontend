@@ -6,6 +6,9 @@ import { Modal } from "../components/Modal";
 import "./CoursesStyles.css";
 import { useCourseStore } from "../hooks/useCourseStore";
 import { useVideoStore } from "../hooks/useVideoStore";
+// provitional static content
+import { ContentList } from "../components/ContentList";
+
 
 export const Courses = () => {
   const [courseModal, setcourseModal] = useState(false);
@@ -18,14 +21,15 @@ export const Courses = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleCreateCourse = () => {
-    console.log('soy el user '+user.name)
-    setcourseModal(true);
-  };
-  const handleCreateVideo = () => {
-    console.log('soy el user '+user.name)
-    setvideoModal(true);
-  };
+  // const handleCreateCourse = () => {
+  //   console.log('soy el user '+user.name)
+  //   setcourseModal(true);
+  // };
+
+  // const handleCreateVideo = () => {
+  //   console.log('soy el user '+user.name)
+  //   setvideoModal(true);
+  // };
   
   useEffect(() => {
     startLoadingCourses();
@@ -35,14 +39,17 @@ export const Courses = () => {
     startLoadingVideos();
   }, [startLoadingVideos]);
 
-  // console.log(courses);
+  // console.log(cards);
   return (
     <>
-      <h1 className="page-title">Cursos y Talleres</h1>
+      <h1 className="page-title mt-25">Cursos y Talleres</h1>
 
       <div className="banner">
         <h3 className="c-subtitle">Nuevos Lanzamientos</h3>
-        <NewsBanner />
+        {/* <NewsBanner /> */}
+        <div className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          <ContentList contentType='2'/>
+        </div>
         {status === "Authenticated" && (
           <>
             <div className="admin-btns">
@@ -78,15 +85,16 @@ export const Courses = () => {
 
       <div className="categorie">
         <h4>Más Populares</h4>
-        {/* <Slider type={1} cards={<ContentList contentType='2'/>} />*/}
-        <Slider type={1} cards={courses} />
+        {/* <Slider type={1} cards={<ContentList contentType='2'/>} /> */}
+        {/* <Slider type={1} cards={courses} /> */}
       </div>
       <div className="categorie">
         <h4>Más Videos</h4>
         <hr />
         {/* <Slider type={1} cards={<ContentList contentType='2'/>} /> */}
-        <Slider type={1} cards={videos} />
+        {/* <Slider type={1} cards={videos} /> */}
       </div>
+
       {/* <div className="categorie">
         <h4>Recomendaciones para tí</h4>
         <hr />

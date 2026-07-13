@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
@@ -9,10 +11,15 @@ import {
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "../Modal";
+import { useAuthStore } from "../../hooks/useAuthStore";
 import { onSetActiveCourse } from "../../store/courseSlice/courseSlice";
 
 export const CourseCard = (props) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [modal, setModal] = useState(false);
+  const [deletingmodal, setdeletingModal] = useState(false);
+  const { status } = useAuthStore();
 
   // COURSE INSCIPTION
   const handleClickCourse = () => {
@@ -26,6 +33,53 @@ export const CourseCard = (props) => {
       replace: true,
       state: { type: props.type },
     });
+  };
+
+  // OPEN DELETE COURSE MODEL
+  const handleDelete = (post) => {
+    // console.log(post);
+    if (post.type === 2) {
+      console.log("delete course");
+      dispatch(onSetActiveCourse(post));
+    } else if (post.type === 4) {
+      console.log("delete video");
+      dispatch(onSetActiveVideo(post));
+    }
+    setdeletingModal(true);
+  };
+
+  // OPEN EDITION COURSE MODAL
+  const openModal = (post) => {
+    if (post.type === 2) {
+      dispatch(onSetActiveCourse(post));
+      // console.dir(post);
+      setModal(true);
+    } else if (post.type === 4) {
+      dispatch(onSetActiveVideo(post));
+      // console.dir(post);
+      setvideoModal(true);
+    }
+  };
+
+  // CLOSE EDITION COURSE MODAL
+  const closeModal = (option) => {
+    if (option === 2) {
+      setModal(false);
+      dispatch(onSetActiveCourse(null));
+    } else if (option === 4) {
+      setvideoModal(false);
+      dispatch(onSetActiveVideo(null));
+    }
+  };
+
+  // CLOSE DELETE COURSE MODAL
+  const closeDeletingModal = (option) => {
+    setdeletingModal(false);
+    if (option === 2) {
+      dispatch(onSetActiveCourse(null));
+    } else if (option === 4) {
+      dispatch(onSetActiveVideo(null));
+    }
   };
 
   return (
