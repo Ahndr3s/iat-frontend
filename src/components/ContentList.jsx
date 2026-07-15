@@ -69,7 +69,7 @@ export const ContentList = (props) => {
         // console.log("servCard");
         break;
       case 2:
-        // console.log("courseCard");
+        // console.log(combinedProps);
         cardList.push(
           <CourseCard
             className="my-4 overflow-hidden px-2"

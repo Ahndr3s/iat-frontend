@@ -12,10 +12,13 @@ export const contents = [
     ],
     learning: [
       "Fundamentos de IA",
-      "chat GPT 360°",
+      "Chat GPT 360°",
       "Diseño de Planeaciones con Prompts Engenieering",
     ],
-    instructor: "Alberto Moreno",
+    instructor: {
+      name: "Alberto Moreno",
+      bio: "Un maestro con una profunda pasión por la integración de la tecnología en la educación, lidera con el ejemplo, demostrando que siempre hay espacio para aprender y crecer.",
+    },
     img: "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732864871/gzenotjwhjb8cssi0qrx.png",
     user: "6749688c3af3d53539b8fa8a",
   },
@@ -31,7 +34,10 @@ export const contents = [
       "El objetivo principal es optimizar los tiempos de gestión y eliminar las tareas manuales repetitivas dentro de la institución educativa. Al finalizar el taller, el equipo será capaz de diseñar formularios de registro inteligentes, almacenar datos de forma segura en la nube y configurar alertas automáticas de confirmación. Esta transformación digital mejorará la experiencia de los estudiantes y aligerará significativamente la carga operativa del personal.",
     ],
     learning: ["Aprendizajes de Herramientas de Microsoft"],
-    instructor: "Diana Bernal",
+    instructor: {
+      name: "Diana Bernal",
+      bio: "Doctora con una sólida formación académica y un compromiso con el desarrollo profesional docente, inspira a educadores a alcanzar nuevas alturas en su carrera y a crear un impacto significativo en sus aulas.",
+    },
     img: "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732865299/wrrqjmxkqqqav9d1twcj.png",
     user: "6749688c3af3d53539b8fa8a",
   },
@@ -49,7 +55,10 @@ export const contents = [
     learning: [
       "Introducción a la Cultura RUBIK\nBeneficios del cubo RUBIK\nAprendizaje Basado en Proyectos:  Fundamentación de la propuiesta didáctica\nClase práctica y demostrraciónb del cubo RUBIK\n",
     ],
-    instructor: "Cesar Rivas",
+    instructor: {
+      name: "Cesar Rivas",
+      bio: "Un maestro innovador y creativo, trae al equipo su experiencia en prácticas educativas vanguardistas como el uso didáctico del cubo Rubik, fomentando el pensamiento crítico entre estudiantes.",
+    },
     img: "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732865714/brikf2mhsslge9ido3ho.png",
     user: "6749688c3af3d53539b8fa8a",
   },
@@ -67,7 +76,10 @@ export const contents = [
     learning: [
       "Fortalece competencias profesionales necesarias en los docentes para diseñar y argumentar una planeación didáctica\nIncluye instrumentos de evaluación ",
     ],
-    instructor: "Javier Conde",
+    instructor: {
+      name: "Javier Conde",
+      bio: "Maestro experto proyectos educativos enfocados en matemáticas, desarrollar redes de aprendizaje y brindar asesorias técnicas pedagógicas.",
+    },
     img: "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732866006/gog6geigvpiq9sieuhqp.png",
     user: "6749688c3af3d53539b8fa8a",
   },

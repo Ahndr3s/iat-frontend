@@ -13,12 +13,13 @@ import "../pages/CoursePageStyles.css";
 export const CoursePage = () => {
   const { id } = useParams();
   const location = useLocation();
-  const { type } = location.state || {};
   // const { videos } = useVideoStore();
+  // const { type } = location.state || {};
+  const { type } = location.state || 2;
   const { courses } = useCourseStore();
 
   //  Static record search
-  const content = type ? getConsultorById(type, courses, id) : null;
+  const content = courses ? getConsultorById(type, courses, id) : null;
 
   if (!content) return <Navigate to={"/courses"} replace />;
 
@@ -29,7 +30,7 @@ export const CoursePage = () => {
   // content = getConsultorById(type, videos, id);
   // }
 
-  // console.dir(content);
+  console.dir(content);
   return (
     <>
       <div className="course-wrapper mt-18 w-screen min-h-screen overflow-y-auto flex flex-col">
@@ -52,11 +53,18 @@ export const CoursePage = () => {
             </div>
             <div className="c-resume">
               <h4 className="mb-2">Aprenderás</h4>
-              <p className="px-4">{content.resume}</p>
+              <ul className="px-4">
+                {content.info.map((data) => {
+                  return <li key={data}>{data}</li>;
+                })}
+              </ul>
             </div>
             <div className="c-resume">
               <h4 className="mb-2">Impartido por</h4>
-              <p className="px-4">{content.resume}</p>
+              <div>
+                {/* <h6>{content.instructor.name}</h6>
+                <p className="px-4">{content.instructor.bio}</p> */}
+              </div>
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ export const CourseCard = (props) => {
   const [setvideoModal] = useState(false);
   const [deletingmodal, setdeletingModal] = useState(false);
   const { status } = useAuthStore();
-  // console.log(props);
+  console.log(props);
 
   // COURSE INSCIPTION
   const handleClickCourse = () => {
@@ -28,7 +28,7 @@ export const CourseCard = (props) => {
     dispatch(onSetActiveCourse(props));
     navigate(`/coursePage/${props.id}`, {
       replace: true,
-      state: { type: props.type },
+      state: { type: Number(props.type) },
     });
   };
 
@@ -156,7 +156,7 @@ CourseCard.propTypes = {
   type: PropTypes.number,
   title: PropTypes.string,
   img: PropTypes.string,
-  instructor: PropTypes.string,
+  instructor: PropTypes.object,
   modality: PropTypes.string,
   learning: PropTypes.array,
   btntxt: PropTypes.string,
