@@ -4,7 +4,6 @@ import { getContentsByType } from "../helpers/getContents";
 import { TeamCard } from "./cards/TeamCard";
 import { CourseCard } from "./cards/CourseCard";
 
-
 export const ContentList = (props) => {
   const contents = getContentsByType(
     props.contents,
@@ -22,9 +21,12 @@ export const ContentList = (props) => {
       // console.log("courseCard");
       //COURSES
       additionalProps = {
-        info: content.info,
-        Coursedata: content.Coursedata,
+        // info: content.aprendizaje,
+        learning: content.learning,
         resume: content.resume,
+        pitch: content.pitch,
+        instructor: content.instructor,
+        btntxt: content.btntxt,
         // Más props específicas para COURSES
       };
     } else if (props.contentType === "3") {
@@ -70,7 +72,7 @@ export const ContentList = (props) => {
         // console.log("courseCard");
         cardList.push(
           <CourseCard
-            className="my-4 mx-4 max-w-base overflow-hidden px-2"
+            className="my-4 overflow-hidden px-2"
             {...combinedProps}
             key={content.id}
           />,
@@ -80,7 +82,7 @@ export const ContentList = (props) => {
         // console.log("teamCard");
         cardList.push(
           <TeamCard
-            className="my-4 mx-4 max-w-base overflow-hidden px-2"
+            className="my-4 overflow-hidden px-2"
             {...combinedProps}
             key={content.id}
           />,

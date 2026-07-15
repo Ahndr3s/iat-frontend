@@ -3,23 +3,20 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
-import {
-  faClock,
-  faCalendar,
-  faLocationDot,
-  faPenToSquare,
-  faTrash,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "../Modal";
 import { useAuthStore } from "../../hooks/useAuthStore";
 import { onSetActiveCourse } from "../../store/courseSlice/courseSlice";
+import { onSetActiveVideo } from "../../store/videoSlice/videoSlice";
 
 export const CourseCard = (props) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [modal, setModal] = useState(false);
+  const [setvideoModal] = useState(false);
   const [deletingmodal, setdeletingModal] = useState(false);
   const { status } = useAuthStore();
+  // console.log(props);
 
   // COURSE INSCIPTION
   const handleClickCourse = () => {
@@ -86,80 +83,69 @@ export const CourseCard = (props) => {
     <div className="course-card">
       <img className="course-card-img" src={props.img} />
       <div className="card-info">
-        <h5 className="course-mod">{props.modality}</h5>
-        <h3 className="course-title">{props.title}</h3>
-        <div className="course-data">
-          <p className="c-details">
-            <FontAwesomeIcon icon={faClock} /> {props.Coursedata[0]}
-          </p>
-          <p className="c-details">
-            <FontAwesomeIcon icon={faCalendar} /> {props.Coursedata[1]}
-          </p>
-          <p className="c-details">
-            <FontAwesomeIcon icon={faLocationDot} /> {props.Coursedata[2]}
-          </p>
+        <h5 className="course-mod my-4">Online y Presencial</h5>
+        <h3 className="course-title text-2xl my-2">{props.title}</h3>
+
+        <div className="c-pitch text-base my-2 mx-8">{props.pitch}</div>
+        <div className="btn-cont grid grid-cols-1 justify-items-center justify-center my-2">
+          <button
+            className="serv-btn text-white border-2"
+            onClick={handleClickCourse}
+          >
+            {props.btntxt}
+          </button>
+          <button
+            className="serv-btn border-2"
+            onClick={() =>
+              handleClickCourseDetails({
+                ...props,
+                id: props.id,
+                user: props.user,
+              })
+            }
+          >
+            Ver Más
+          </button>
+          {status === "Authenticated" && (
+            <>
+              <div className="admin-btns">
+                <button
+                  onClick={() =>
+                    // console.log(props)
+                    openModal({ ...props, id: props.id, user: props.user })
+                  }
+                  className="edit-btn"
+                >
+                  <FontAwesomeIcon icon={faPenToSquare} />
+                </button>
+                <Modal
+                  modalType={1}
+                  formType={4}
+                  formAction={1}
+                  openModal={modal}
+                  info={props}
+                  closeModal={() => closeModal(2)}
+                >
+                  Editar {props.title}
+                </Modal>
+                <button
+                  onClick={() => handleDelete({ ...props, id: props.id })}
+                  className="del-btn"
+                >
+                  <FontAwesomeIcon icon={faTrash} />
+                </button>
+                <Modal
+                  modalType={2}
+                  openModal={deletingmodal}
+                  info={props}
+                  closeModal={() => closeDeletingModal(2)}
+                >
+                  Eliminar {props.title}
+                </Modal>
+              </div>
+            </>
+          )}
         </div>
-        <div className="c-info">
-          <ul className="c-list">
-            {props.info.map((data) => {
-              return <li key={data}>{data}</li>;
-            })}
-          </ul>
-        </div>
-        <button className="serv-btn" onClick={handleClickCourse}>
-          {props.btntxt}
-        </button>
-        <button
-          className="serv-btn"
-          onClick={() =>
-            handleClickCourseDetails({
-              ...props,
-              id: props.id,
-              user: props.user,
-            })
-          }
-        >
-          Ver Más
-        </button>
-        {status === "Authenticated" && (
-          <>
-            <div className="admin-btns">
-              <button
-                onClick={() =>
-                  // console.log(props)
-                  openModal({ ...props, id: props.id, user: props.user })
-                }
-                className="edit-btn"
-              >
-                <FontAwesomeIcon icon={faPenToSquare} />
-              </button>
-              <Modal
-                modalType={1}
-                formType={4}
-                formAction={1}
-                openModal={modal}
-                info={props}
-                closeModal={() => closeModal(2)}
-              >
-                Editar {props.title}
-              </Modal>
-              <button
-                onClick={() => handleDelete({ ...props, id: props.id })}
-                className="del-btn"
-              >
-                <FontAwesomeIcon icon={faTrash} />
-              </button>
-              <Modal
-                modalType={2}
-                openModal={deletingmodal}
-                info={props}
-                closeModal={() => closeDeletingModal(2)}
-              >
-                Eliminar {props.title}
-              </Modal>
-            </div>
-          </>
-        )}
       </div>
     </div>
   );
@@ -170,11 +156,12 @@ CourseCard.propTypes = {
   type: PropTypes.number,
   title: PropTypes.string,
   img: PropTypes.string,
+  instructor: PropTypes.string,
   modality: PropTypes.string,
-  info: PropTypes.array,
+  learning: PropTypes.array,
   btntxt: PropTypes.string,
   resume: PropTypes.any,
-  Coursedata: PropTypes.array,
+  pitch: PropTypes.string,
   pageRoute: PropTypes.string,
   url: PropTypes.string,
   ref: PropTypes.any,

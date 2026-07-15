@@ -9,7 +9,6 @@ import { useVideoStore } from "../hooks/useVideoStore";
 // provitional static content
 import { ContentList } from "../components/ContentList";
 
-
 export const Courses = () => {
   const [courseModal, setcourseModal] = useState(false);
   const [videoModal, setvideoModal] = useState(false);
@@ -30,7 +29,7 @@ export const Courses = () => {
   //   console.log('soy el user '+user.name)
   //   setvideoModal(true);
   // };
-  
+
   useEffect(() => {
     startLoadingCourses();
   }, [startLoadingCourses]);
@@ -47,10 +46,10 @@ export const Courses = () => {
       <div className="banner">
         <h3 className="c-subtitle">Nuevos Lanzamientos</h3>
         {/* <NewsBanner /> */}
-        <div className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-          <ContentList contentType='2'/>
+        <div className=" grid grid-cols-1 justify-items-center justify-center md:grid-cols-2 lg:grid-cols-2">
+          <ContentList contentType="2" />
         </div>
-        {status === "Authenticated" && (
+        {/* {status === "Authenticated" && (
           <>
             <div className="admin-btns">
               <button onClick={handleCreateCourse} className="serv-btn">
@@ -80,7 +79,7 @@ export const Courses = () => {
               </Modal>
             </div>
           </>
-        )}
+        )} */}
       </div>
 
       <div className="categorie">
@@ -99,7 +98,7 @@ export const Courses = () => {
         <h4>Recomendaciones para tí</h4>
         <hr />
         {/* <Slider type={1} cards={<ContentList contentType='2'/>} />*/}
-        {/* <Slider type={2} cards={videos} /> */}
+      {/* <Slider type={2} cards={videos} /> */}
       {/* </div> */}
     </>
   );

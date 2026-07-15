@@ -1,52 +1,62 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useLocation } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import { useVideoStore } from "../hooks/useVideoStore";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useLocation, useParams, Navigate } from "react-router-dom";
+// import { useVideoStore } from "../hooks/useVideoStore";
 import { useCourseStore } from "../hooks/useCourseStore";
 import { getConsultorById } from "../helpers/getConsultorById";
-import {
-  faClock,
-  faCalendar,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
+// import {
+//   faClock,
+//   faCalendar,
+//   faLocationDot,
+// } from "@fortawesome/free-solid-svg-icons";
 import "../pages/CoursePageStyles.css";
 
 export const CoursePage = () => {
   const { id } = useParams();
   const location = useLocation();
   const { type } = location.state || {};
-  const { videos } = useVideoStore();
+  // const { videos } = useVideoStore();
   const { courses } = useCourseStore();
-  let content;
 
-  if (type === 2) {
-    content = getConsultorById(type, courses, id);
-  } else if (type === 4) {
-    content = getConsultorById(type, videos, id);
-  }
-  console.dir(content);
+  //  Static record search
+  const content = type ? getConsultorById(type, courses, id) : null;
+
+  if (!content) return <Navigate to={"/courses"} replace />;
+
+  //Dynamic record search
+  // if (type === 2) {
+  // content = getConsultorById(type, courses, id);
+  // } else if (type === 4) {
+  // content = getConsultorById(type, videos, id);
+  // }
+
+  // console.dir(content);
   return (
     <>
-      <div className="course-wrapper">
+      <div className="course-wrapper mt-18 w-screen min-h-screen overflow-y-auto flex flex-col">
         <div
-          className="course-header"
+          className="course-header w-full h-[50vh] flex flex-col justify-center items-center bg-center bg-no-repeat relative shrink-0 p-8"
           style={{ backgroundImage: `url(${content.img})` }}
         >
-          <div className="course-info">
-            <h1 className="page-title">{content.name}</h1>
-            <div className="course-data">
-              <p className="c-details">
-                <FontAwesomeIcon icon={faClock} /> {content.Coursedata[0]}
-              </p>
-              <p className="c-details">
-                <FontAwesomeIcon icon={faCalendar} /> {content.Coursedata[1]}
-              </p>
-              <p className="c-details">
-                <FontAwesomeIcon icon={faLocationDot} /> {content.Coursedata[2]}
-              </p>
+          <div className="course-title inset-0 z-0 ">
+            <h1 className="page-title text-4xl bg-black/40 font-bold z-10 text-center md:text-justify px-4 shadow-sm">
+              {content.name}
+            </h1>
+          </div>
+        </div>
+
+        <div className="course-info w-full text-left md:text-justify flex flex-col py-12 px-6 grow">
+          <div className="c-info md:w-3/4 mx-auto space-y-6 text-gray-200 wrap-break-words px-4">
+            <div className="c-resume md:px-8">
+              <h4 className="mb-2">¿Qué es?</h4>
+              <p className="px-4">{content.resume}</p>
             </div>
-            <div className="c-info">
-              <p className="c-resume">{content.resume}</p>
+            <div className="c-resume">
+              <h4 className="mb-2">Aprenderás</h4>
+              <p className="px-4">{content.resume}</p>
+            </div>
+            <div className="c-resume">
+              <h4 className="mb-2">Impartido por</h4>
+              <p className="px-4">{content.resume}</p>
             </div>
           </div>
         </div>

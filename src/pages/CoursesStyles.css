@@ -6,10 +6,11 @@
 .course-card {
   display: flex;
   align-items: center;
-  width: 800px;
+  /* width: 800px; */
   /* height: 470px; */
   border: double 1px transparent;
-  background-image: linear-gradient(#601875, #102172),
+  background-image:
+    linear-gradient(#601875, #102172),
     linear-gradient(90deg, #650577, #f66c49, #f82f5c);
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -61,7 +62,7 @@
 }
 
 .course-title {
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .course-title,
@@ -69,20 +70,9 @@
   margin-left: 1rem;
 }
 
-.course-data {
-  display: flex;
-  justify-content: space-around;
-}
-
-.c-list,
-.course-data {
+.c-list {
   font-size: 12px;
 }
-
-.course-data .c-details {
-  padding-left: 1rem;
-  padding-right: 1rem;
-} 
 
 .c-resume {
   font-size: 11px;
@@ -124,8 +114,6 @@
   justify-content: space-evenly;
 }
 
-
-
 /*Responsive courses styles starts*/
 @media only screen and (max-width: 600px) {
   .slide {
@@ -152,23 +140,21 @@
     width: 280px;
     display: grid;
     min-height: 200px;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 auto 15px auto;
   }
 
   .course-card-img {
     width: 15rem;
     height: 14rem;
-    margin-bottom: 0%;
   }
 
   .course-title {
     margin-right: 2rem;
   }
 
-  .course-card .course-title {
+  /* .course-card .course-title {
     font-size: 16px;
-  }
+  } */
 
   .c-details {
     font-size: 12px;
