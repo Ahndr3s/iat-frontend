@@ -16,7 +16,7 @@ export const CourseCard = (props) => {
   const [setvideoModal] = useState(false);
   const [deletingmodal, setdeletingModal] = useState(false);
   const { status } = useAuthStore();
-  console.log(props);
+  // console.log(props);
 
   // COURSE INSCIPTION
   const handleClickCourse = () => {
@@ -86,7 +86,7 @@ export const CourseCard = (props) => {
         <h5 className="course-mod my-4">Online y Presencial</h5>
         <h3 className="course-title text-2xl my-2">{props.title}</h3>
 
-        <div className="c-pitch text-base my-2 mx-8">{props.pitch}</div>
+        <div className="c-pitch text-sm my-2 mx-8">{props.pitch}</div>
         <div className="btn-cont grid grid-cols-1 justify-items-center justify-center my-2">
           <button
             className="serv-btn text-white border-2"

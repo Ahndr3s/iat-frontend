@@ -5,7 +5,7 @@ export const contents = [
     name: "Inteligencia Artificial para Docentes",
     btntxt: "Inscribirse",
     pitch:
-      "Partimos desde cero a los conceptos esenciales, descubres las capacidades, funciones y limitantes de chatGPT, exploración de herramientas de IA para la docencia.",
+      "Explora herramientas prácticas de inteligencia artificial aplicadas a la docencia.",
     resume: [
       "Este curso está diseñado para llevarte paso a paso desde los conceptos más básicos hasta el dominio de las funciones esenciales de la inteligencia artificial. A lo largo del programa, descubrirás el verdadero potencial de ChatGPT, analizando a fondo sus capacidades, funciones clave y limitaciones actuales. El objetivo es que pierdas el miedo a la tecnología y comprendas con total claridad cómo opera esta herramienta en el entorno actual.",
       "Posteriormente nos enfocaremos por completo en la práctica docente mediante una exploración profunda de diversas herramientas de IA. Aprenderás a integrar estos recursos tecnológicos en tus planeaciones, evaluaciones y dinámicas de clase diarias. Al finalizar, transformarás tu metodología de enseñanza, optimizando tus tiempos y creando experiencias de aprendizaje mucho más interactivas y atractivas para tus estudiantes.",
@@ -18,6 +18,7 @@ export const contents = [
     instructor: {
       name: "Alberto Moreno",
       bio: "Un maestro con una profunda pasión por la integración de la tecnología en la educación, lidera con el ejemplo, demostrando que siempre hay espacio para aprender y crecer.",
+      img: "alberto"
     },
     img: "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732864871/gzenotjwhjb8cssi0qrx.png",
     user: "6749688c3af3d53539b8fa8a",
@@ -28,7 +29,7 @@ export const contents = [
     name: "Automatización de Inscrpciones Escolares con Microsoft Apps",
     btntxt: "Inscribirse",
     pitch:
-      "Capacitación para el personal administrativo y docente en el uso de aplicaciones de Microsoft como Excel, Power Automate, Forms y Share Point para crear un sistema de insrcipciones.",
+      "Capacitación práctica para crear un sistema de inscripciones automatizado utilizando las herramientas clave de Microsoft.",
     resume: [
       "Este taller práctico está diseñado especialmente para capacitar al personal administrativo y docente en la creación de un sistema de inscripciones automatizado y eficiente. A lo largo de las sesiones, los participantes aprenderán a conectar las herramientas clave del ecosistema de Microsoft, tales como Excel, Forms, SharePoint y Power Automate. No se requieren conocimientos avanzados previos, ya que el contenido guía a los usuarios desde los fundamentos hasta la implementación de flujos de trabajo reales.",
       "El objetivo principal es optimizar los tiempos de gestión y eliminar las tareas manuales repetitivas dentro de la institución educativa. Al finalizar el taller, el equipo será capaz de diseñar formularios de registro inteligentes, almacenar datos de forma segura en la nube y configurar alertas automáticas de confirmación. Esta transformación digital mejorará la experiencia de los estudiantes y aligerará significativamente la carga operativa del personal.",
@@ -37,6 +38,7 @@ export const contents = [
     instructor: {
       name: "Diana Bernal",
       bio: "Doctora con una sólida formación académica y un compromiso con el desarrollo profesional docente, inspira a educadores a alcanzar nuevas alturas en su carrera y a crear un impacto significativo en sus aulas.",
+      img:"diana"
     },
     img: "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732865299/wrrqjmxkqqqav9d1twcj.png",
     user: "6749688c3af3d53539b8fa8a",
@@ -47,7 +49,7 @@ export const contents = [
     name: "Taller del uso didáctico del cubo RUBIK",
     btntxt: "Inscribirse",
     pitch:
-      "Esta capacitación transforma el famoso rompecabezas en una poderosa herramienta pedagógica para enseñar matemáticas, geometría y resolución de problemas de forma lúdica",
+      "Aprende a transformar el cubo Rubik en una divertida herramienta pedagógica para enseñar matemáticas y geometría.",
     resume: [
       "El Taller del uso didáctico del cubo Rubik es una propuesta formativa que transforma el famoso rompecabezas en una potente herramienta pedagógica dentro del aula. Este curso capacita a los docentes para estructurar sesiones dinámicas que estimulan de forma directa el pensamiento lógico, la visión espacial y la concentración de los estudiantes. Al integrar este desafío tridimensional en el currículo, los profesores descubren cómo convertir conceptos complejos de matemáticas y geometría en experiencias de aprendizaje tangibles, accesibles y profundamente motivadoras.",
       "Más allá de las fórmulas, la capacitación se enfoca en el desarrollo de habilidades blandas esenciales como la paciencia, la tolerancia a la frustración y la resiliencia ante la resolución de problemas. Los participantes dominarán estrategias metodológicas para aplicar la gamificación en sus clases cotidianas, diseñando retos adaptables a diferentes niveles escolares. Al concluir el taller, los educadores contarán con un sistema didáctico innovador que rompe con la enseñanza tradicional y despierta la curiosidad genuina de sus alumnos.",
@@ -58,6 +60,7 @@ export const contents = [
     instructor: {
       name: "Cesar Rivas",
       bio: "Un maestro innovador y creativo, trae al equipo su experiencia en prácticas educativas vanguardistas como el uso didáctico del cubo Rubik, fomentando el pensamiento crítico entre estudiantes.",
+      img: "cesar"
     },
     img: "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732865714/brikf2mhsslge9ido3ho.png",
     user: "6749688c3af3d53539b8fa8a",
@@ -68,10 +71,10 @@ export const contents = [
     name: "Diseño y Elaboración de Planeaciones Educativas",
     btntxt: "Inscribirse",
     pitch:
-      "Domina las metodologías clave para estructurar clases alineadas a los planes de estudio vigentes, redactar objetivos claros y diseñar actividades que realmente enganchen a tus alumnos",
+      "Aprende a estructurar clases alineadas al plan de estudio mediante objetivos claros y actividades altamente motivadoras.",
     resume: [
-      "El taller Diseño y Elaboración de Planeaciones Educativas le ofrece las herramientas metodológicas definitivas para estructurar clases efectivas y totalmente alineadas a los planes de estudio vigentes. A lo largo de la capacitación, usted aprenderá a redactar objetivos de aprendizaje claros, medibles y alcanzables, asegurando que cada sesión tenga un propósito pedagógico firme. Este enfoque integral le permitirá transformar la planeación de un simple requisito administrativo a una guía estratégica que potencia los resultados académicos de su institución.",
-      "Nos enfocaremos en el diseño de situaciones didácticas innovadoras y estrategias de evaluación formativa que realmente logren enganchar a sus alumnos. Usted descubrirá cómo seleccionar recursos creativos y secuenciar actividades dinámicas que fomenten la participación activa dentro del aula. Al finalizar el taller, usted optimizará sus tiempos de preparación, reducirá la carga de trabajo fuera del horario escolar y contará con un portafolio de planeaciones listo para aplicarse con éxito",
+      "El taller Diseño y Elaboración de Planeaciones Educativas le ofrece las herramientas metodológicas definitivas para estructurar clases efectivas y totalmente alineadas a los planes de estudio vigentes.", 
+      "A lo largo de la capacitación, usted aprenderá a redactar objetivos de aprendizaje claros, medibles y alcanzables, asegurando que cada sesión tenga un propósito pedagógico firme.",
     ],
     learning: [
       "Fortalece competencias profesionales necesarias en los docentes para diseñar y argumentar una planeación didáctica\nIncluye instrumentos de evaluación ",
@@ -79,6 +82,7 @@ export const contents = [
     instructor: {
       name: "Javier Conde",
       bio: "Maestro experto proyectos educativos enfocados en matemáticas, desarrollar redes de aprendizaje y brindar asesorias técnicas pedagógicas.",
+      img: "javier"
     },
     img: "https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732866006/gog6geigvpiq9sieuhqp.png",
     user: "6749688c3af3d53539b8fa8a",

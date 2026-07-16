@@ -30,7 +30,7 @@ export const SearchBar = () => {
   };
 
   return (
-    <div className="search-container">
+    <div className="search-container mt-14">
       <form className="search-form" onSubmit={onSearchSubmit}>
         <input
           type="text"

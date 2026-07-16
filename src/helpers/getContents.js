@@ -1,8 +1,10 @@
 import { contents } from "../../assets/data/content";
 
-export const getContentsByType = (collection, contentType, limit) => {
+export const getContentsByType = (contentType, collection = contents, limit) => {
   const types = ["1", "2", "3", '4'];
   let filteredContents
+
+
   if (!types.includes(String(contentType))) {
     throw new Error(`${contentType} is not a valid Content Type`);
   }
@@ -15,7 +17,7 @@ export const getContentsByType = (collection, contentType, limit) => {
   // }
   
   // Si se proporciona un límite, devuelve los últimos 'limit' registros
-  if (limit !== undefined) {
+  if (limit !== undefined && limit === null) {
     return filteredContents.slice(-limit);
   }
   

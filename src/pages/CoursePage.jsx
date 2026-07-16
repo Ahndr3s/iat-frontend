@@ -1,8 +1,10 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation, useParams, Navigate } from "react-router-dom";
 // import { useVideoStore } from "../hooks/useVideoStore";
-import { useCourseStore } from "../hooks/useCourseStore";
+// import { useCourseStore } from "../hooks/useCourseStore";
 import { getConsultorById } from "../helpers/getConsultorById";
+import { getContentsByType } from "../helpers/getContents";
+
 // import {
 //   faClock,
 //   faCalendar,
@@ -16,10 +18,13 @@ export const CoursePage = () => {
   // const { videos } = useVideoStore();
   // const { type } = location.state || {};
   const { type } = location.state || 2;
-  const { courses } = useCourseStore();
+  // const { courses } = useCourseStore();
 
   //  Static record search
-  const content = courses ? getConsultorById(type, courses, id) : null;
+  // const content = courses ? getConsultorById(type, courses, id) : null;
+  const content = getConsultorById(
+    String(type), undefined, id
+  );
 
   if (!content) return <Navigate to={"/courses"} replace />;
 
@@ -30,10 +35,10 @@ export const CoursePage = () => {
   // content = getConsultorById(type, videos, id);
   // }
 
-  console.dir(content);
+  // console.dir(content);
   return (
     <>
-      <div className="course-wrapper mt-18 w-screen min-h-screen overflow-y-auto flex flex-col">
+      <div className="course-wrapper mt-14 w-screen min-h-screen overflow-y-auto flex flex-col">
         <div
           className="course-header w-full h-[50vh] flex flex-col justify-center items-center bg-center bg-no-repeat relative shrink-0 p-8"
           style={{ backgroundImage: `url(${content.img})` }}
@@ -54,7 +59,7 @@ export const CoursePage = () => {
             <div className="c-resume">
               <h4 className="mb-2">Aprenderás</h4>
               <ul className="px-4">
-                {content.info.map((data) => {
+                {content.learning.map((data) => {
                   return <li key={data}>{data}</li>;
                 })}
               </ul>
@@ -62,8 +67,13 @@ export const CoursePage = () => {
             <div className="c-resume">
               <h4 className="mb-2">Impartido por</h4>
               <div>
-                {/* <h6>{content.instructor.name}</h6>
-                <p className="px-4">{content.instructor.bio}</p> */}
+                <h6>{content.instructor.name}</h6>
+                <div className="grid grid-cols-1 md:grid-cols-2">
+
+                  <p className="px-4">{content.instructor.bio}</p>
+                  <img src={`../../assets/${content.instructor.img}.png`}
+          className="w-5rem h-8rem mt-9 md:w-1vh md:h-1.5vh justify-self-center rounded-lg" />
+                </div>
               </div>
             </div>
           </div>

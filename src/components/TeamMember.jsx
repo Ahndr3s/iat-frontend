@@ -22,9 +22,9 @@ export const TeamMember = () => {
 
   return (
     <>
-      <div className="wrapper mt-18">
+      <div className="wrapper mt-14">
         <div className="page-header">
-          <div className="team-titles">
+          <div className="team-titles pb-2">
             <h1 className="team-name">{consultor.name}</h1>
             <h5>
               <FontAwesomeIcon icon={faEnvelope} /> {consultor.email}
@@ -33,9 +33,10 @@ export const TeamMember = () => {
           </div>
         </div>
 
+        <div className="instructor-info grid grid-cols-1 md:grid-cols-2">
         <img
           src={`../../assets/${consultor.img}.png`}
-          className="team-img  mt-[19vh]"
+          className="team-img w-5rem h-8rem mt-9 justify-self-center"
         />
         <div className="info-container">
           <div className="team-member-info">
@@ -47,6 +48,7 @@ export const TeamMember = () => {
               );
             })}
           </div>
+        </div>
         </div>
       </div>
     </>

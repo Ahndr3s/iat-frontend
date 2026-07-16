@@ -6,8 +6,8 @@ import { CourseCard } from "./cards/CourseCard";
 
 export const ContentList = (props) => {
   const contents = getContentsByType(
-    props.contents,
     props.contentType,
+    props.contents,
     props.limit,
   );
   let cardList = [];

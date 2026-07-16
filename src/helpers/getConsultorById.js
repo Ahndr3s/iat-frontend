@@ -1,4 +1,6 @@
-export const getConsultorById = (contentType, collection, id) => {
+import { contents } from "../../assets/data/content";
+
+export const getConsultorById = (contentType, collection = contents, id) => {
 
     if(contentType === 2){
         return collection.find(course => course.id === id)    

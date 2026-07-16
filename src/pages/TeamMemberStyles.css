@@ -29,12 +29,9 @@
 }
 
 .team-img {
-  height: 50vh;
-  margin-left: 7rem;
-  position: absolute;
+  /* position: absolute;
   z-index: 900;
-  top: 100px;
-  width: 35rem;
+  top: 100px; */
 }
 
 .info-container {
@@ -78,11 +75,11 @@
     min-width: unset;
   }
 
-  .team-img {
+  /* .team-img {
     margin-left: 5rem;
     width: 60%;
     height: 30vh;
-  }
+  } */
 
   .team-member-info {
     min-width: unset;

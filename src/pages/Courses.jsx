@@ -3,11 +3,15 @@ import { useAuthStore } from "../hooks/useAuthStore";
 import { Slider } from "../components/Slider";
 import { NewsBanner } from "../components/NewsBanner";
 import { Modal } from "../components/Modal";
-import "./CoursesStyles.css";
 import { useCourseStore } from "../hooks/useCourseStore";
 import { useVideoStore } from "../hooks/useVideoStore";
+import "./CoursesStyles.css";
+
 // provitional static content
 import { ContentList } from "../components/ContentList";
+import { ClassicSlider } from "../components/sliders/ClassicSlider";
+import { getContentsByType } from "../helpers/getContents";
+
 
 export const Courses = () => {
   const [courseModal, setcourseModal] = useState(false);
@@ -15,8 +19,12 @@ export const Courses = () => {
   const { status, user } = useAuthStore();
   const { courses, startLoadingCourses } = useCourseStore();
   const { videos, startLoadingVideos } = useVideoStore();
-
-  useEffect(() => {
+  
+  const cards = getContentsByType("2")
+  console.log(cards)
+  
+  
+    useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
@@ -38,7 +46,7 @@ export const Courses = () => {
     startLoadingVideos();
   }, [startLoadingVideos]);
 
-  // console.log(cards);
+
   return (
     <>
       <h1 className="page-title mt-25">Cursos y Talleres</h1>
@@ -48,6 +56,7 @@ export const Courses = () => {
         {/* <NewsBanner /> */}
         <div className=" grid grid-cols-1 justify-items-center justify-center md:grid-cols-2 lg:grid-cols-2">
           <ContentList contentType="2" />
+          <ClassicSlider cards={cards}/>
         </div>
         {/* {status === "Authenticated" && (
           <>
