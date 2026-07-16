@@ -95,13 +95,6 @@ textarea {
 /*----------------Common card styles ends----------------*/
 
 /*----------------Slider styles starts----------------*/
-.slider-container {
-  display: flex;
-  justify-items: center;
-  animation: fadeIn 1s ease-out forwards;
-  overflow: hidden;
-  width: 100%;
-}
 
 .slide {
   display: flex;

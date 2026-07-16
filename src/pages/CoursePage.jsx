@@ -1,15 +1,8 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation, useParams, Navigate } from "react-router-dom";
 // import { useVideoStore } from "../hooks/useVideoStore";
 // import { useCourseStore } from "../hooks/useCourseStore";
 import { getConsultorById } from "../helpers/getConsultorById";
-import { getContentsByType } from "../helpers/getContents";
 
-// import {
-//   faClock,
-//   faCalendar,
-//   faLocationDot,
-// } from "@fortawesome/free-solid-svg-icons";
 import "../pages/CoursePageStyles.css";
 
 export const CoursePage = () => {
@@ -18,13 +11,11 @@ export const CoursePage = () => {
   // const { videos } = useVideoStore();
   // const { type } = location.state || {};
   const { type } = location.state || 2;
+  // Global state +  api
   // const { courses } = useCourseStore();
 
   //  Static record search
-  // const content = courses ? getConsultorById(type, courses, id) : null;
-  const content = getConsultorById(
-    String(type), undefined, id
-  );
+  const content = getConsultorById(String(type), undefined, id);
 
   if (!content) return <Navigate to={"/courses"} replace />;
 
@@ -69,10 +60,11 @@ export const CoursePage = () => {
               <div>
                 <h6>{content.instructor.name}</h6>
                 <div className="grid grid-cols-1 md:grid-cols-2">
-
                   <p className="px-4">{content.instructor.bio}</p>
-                  <img src={`../../assets/${content.instructor.img}.png`}
-          className="w-5rem h-8rem mt-9 md:w-1vh md:h-1.5vh justify-self-center rounded-lg" />
+                  <img
+                    src={`../../assets/${content.instructor.img}.png`}
+                    className="w-5rem h-8rem mt-9 md:w-1vh md:h-1.5vh justify-self-center rounded-lg"
+                  />
                 </div>
               </div>
             </div>
