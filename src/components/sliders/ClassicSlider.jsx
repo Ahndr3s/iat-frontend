@@ -51,6 +51,7 @@ export const ClassicSlider = ({ cards, limit }) => {
             user={card.user}
             resume={card.resume}
             instructor={card.instructor}
+            className = "!w-[280px] !min-w[280px] md:!w-[520px] mx-1 flex-shrink-0"
           />
         ))}
         {/* <ContentList contents={cards} contentType={'4'} listType={'1'} /> */}

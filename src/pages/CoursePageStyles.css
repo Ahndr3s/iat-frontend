@@ -46,6 +46,6 @@
   width: 100%;
 }
 
-.slide .course-card {
-  min-width: max-content;
-}
+/* .slide .course-card {
+  min-width: 280px;
+} */

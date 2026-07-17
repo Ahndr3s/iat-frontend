@@ -5,12 +5,14 @@ import { useEffect, useState } from "react";
 // import { Modal } from "../components/Modal";
 import { useCourseStore } from "../hooks/useCourseStore";
 import { useVideoStore } from "../hooks/useVideoStore";
-import "./CoursesStyles.css";
 
 // provitional static content
 import { ContentList } from "../components/ContentList";
 import { ClassicSlider } from "../components/sliders/ClassicSlider";
+import { AutoSlider } from "../components/sliders/AutoSlider";
 import { getContentsByType } from "../helpers/getContents";
+import "./CoursesStyles.css";
+import "../components/sliders/slidersStyles.css";
 
 export const Courses = () => {
   // const [courseModal, setcourseModal] = useState(false);
@@ -22,7 +24,7 @@ export const Courses = () => {
   const { startLoadingVideos } = useVideoStore();
 
   const cards = getContentsByType("2");
-  console.log(cards);
+  // console.log(cards);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -51,10 +53,11 @@ export const Courses = () => {
       <h1 className="page-title mt-25">Cursos y Talleres</h1>
 
       <div className="banner">
-        <h3 className="c-subtitle">Nuevos Lanzamientos</h3>
+        <h3 className="c-subtitle text-xl mb-3">Nuevos Lanzamientos</h3>
         {/* <NewsBanner /> */}
-        <div className=" grid grid-cols-1 justify-items-center justify-center md:grid-cols-2 lg:grid-cols-2">
-          <ContentList contentType="2" />
+        <AutoSlider cards={cards}/>
+        <div className=" grid grid-cols-1 justify-items-center justify-center md:grid-cols-1">
+          {/* <ContentList contentType="2" /> */}
           <ClassicSlider cards={cards} />
         </div>
         {/* {status === "Authenticated" && (

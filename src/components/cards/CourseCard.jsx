@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Modal } from "../Modal";
 import { useAuthStore } from "../../hooks/useAuthStore";
@@ -80,7 +80,7 @@ export const CourseCard = (props) => {
   };
 
   return (
-    <div className="course-card">
+    <div className={`course-card ${props.className || ""} `}>
       <img className="course-card-img" src={props.img} />
       <div className="card-info">
         <h5 className="course-mod my-4">Online y Presencial</h5>
