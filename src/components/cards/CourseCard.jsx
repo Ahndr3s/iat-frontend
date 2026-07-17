@@ -154,6 +154,7 @@ export const CourseCard = (props) => {
 CourseCard.propTypes = {
   id: PropTypes.string,
   type: PropTypes.number,
+  className: PropTypes.string,
   title: PropTypes.string,
   img: PropTypes.string,
   instructor: PropTypes.object,

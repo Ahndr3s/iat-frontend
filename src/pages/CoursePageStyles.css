@@ -13,7 +13,6 @@
   flex-direction: column;
   row-gap: 3rem;
   justify-content: center;
-  /* font-size: larger; */
 }
 
 .c-resume:nth-child(odd) {
@@ -37,15 +36,3 @@
   width: 100%;
   white-space: normal;
 }
-
-.slider-container {
-  display: flex;
-  justify-items: center;
-  animation: fadeIn 1s ease-out forwards;
-  overflow: hidden;
-  width: 100%;
-}
-
-/* .slide .course-card {
-  min-width: 280px;
-} */

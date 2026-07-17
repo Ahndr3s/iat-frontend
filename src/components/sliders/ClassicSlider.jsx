@@ -6,10 +6,11 @@ import {
   faCircleChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { CourseCard } from "../cards/CourseCard";
+import { VideoCard } from "../cards/VideoCard";
 
 // import { getContentsByType } from '../../helpers/getContents';
 
-export const ClassicSlider = ({ cards, limit }) => {
+export const ClassicSlider = ({ cardType, cards, limit }) => {
   const [card, setCard] = useState(0);
   const sliderRef = useRef(null);
   let index;
@@ -39,21 +40,39 @@ export const ClassicSlider = ({ cards, limit }) => {
         onClick={onPreviousClick}
       />
       <div ref={sliderRef} key={index} className="slide">
-        {cards.map((card, index) => (
-          <CourseCard
-            id={card.id}
-            key={`t1${index}`}
-            type={Number(card.type)}
-            title={card.name}
-            btntxt={card.btntxt}
-            learning={card.learning}
-            img={card.img}
-            user={card.user}
-            resume={card.resume}
-            instructor={card.instructor}
-            className = "!w-[280px] !min-w[280px] md:!w-[520px] mx-1 flex-shrink-0"
-          />
-        ))}
+        {cards.map((card, index) => {
+          if (cardType === 2) {
+            return (
+              <CourseCard
+                id={card.id}
+                key={`t1${index}`}
+                type={Number(card.type)}
+                title={card.name}
+                btntxt={card.btntxt}
+                learning={card.learning}
+                img={card.img}
+                user={card.user}
+                resume={card.resume}
+                instructor={card.instructor}
+                className="!w-[280px] !min-w[280px] md:!w-[520px] mx-1 flex-shrink-0"
+              />
+            );
+          }
+          if (cardType === 4) {
+            return (
+              <VideoCard
+                id={card.id}
+                key={`t1${index}`}
+                type={Number(card.type)}
+                title={card.name}
+                img={card.img}
+                url={card.url}
+                user={card.user}
+                className="!w-[280px] !min-w[280px] md:!w-[520px] mx-1 flex-shrink-0"
+              />
+            );
+          }
+        })}
         {/* <ContentList contents={cards} contentType={'4'} listType={'1'} /> */}
       </div>
       <FontAwesomeIcon
@@ -66,6 +85,7 @@ export const ClassicSlider = ({ cards, limit }) => {
 };
 
 ClassicSlider.propTypes = {
+  cardType: PropTypes.number,
   cards: PropTypes.any,
   limit: PropTypes.number,
 };

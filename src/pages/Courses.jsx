@@ -7,7 +7,7 @@ import { useCourseStore } from "../hooks/useCourseStore";
 import { useVideoStore } from "../hooks/useVideoStore";
 
 // provitional static content
-import { ContentList } from "../components/ContentList";
+// import { ContentList } from "../components/ContentList";
 import { ClassicSlider } from "../components/sliders/ClassicSlider";
 import { AutoSlider } from "../components/sliders/AutoSlider";
 import { getContentsByType } from "../helpers/getContents";
@@ -24,7 +24,9 @@ export const Courses = () => {
   const { startLoadingVideos } = useVideoStore();
 
   const cards = getContentsByType("2");
+  const videos = getContentsByType("4");
   // console.log(cards);
+  console.log(videos);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -53,13 +55,13 @@ export const Courses = () => {
       <h1 className="page-title mt-25">Cursos y Talleres</h1>
 
       <div className="banner">
-        <h3 className="c-subtitle text-xl mb-3">Nuevos Lanzamientos</h3>
-        {/* <NewsBanner /> */}
-        <AutoSlider cards={cards}/>
+        <h3 className="c-subtitle text-2xl my-5">Nuevos Lanzamientos</h3>
+        <AutoSlider cards={cards} />
         <div className=" grid grid-cols-1 justify-items-center justify-center md:grid-cols-1">
           {/* <ContentList contentType="2" /> */}
-          <ClassicSlider cards={cards} />
+          <ClassicSlider cardType={2} cards={cards} />
         </div>
+
         {/* {status === "Authenticated" && (
           <>
             <div className="admin-btns">
@@ -95,6 +97,10 @@ export const Courses = () => {
 
       <div className="categorie">
         <h4>Más Populares</h4>
+        <div className=" grid grid-cols-1 justify-items-center justify-center md:grid-cols-1">
+          {/* <ContentList contentType="2" /> */}
+          <ClassicSlider cardType={4} cards={videos} />
+        </div>
         {/* <Slider type={1} cards={<ContentList contentType='2'/>} /> */}
         {/* <Slider type={1} cards={courses} /> */}
       </div>
