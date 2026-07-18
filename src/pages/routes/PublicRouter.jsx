@@ -11,6 +11,7 @@ import { ResourceDesign } from "../ResourceDesign";
 import { TeamMember } from "../../components/TeamMember";
 import { SearchPage } from "../SearchPage";
 import { Contact } from "../Contact";
+import { Projects } from "../Projects";
 
 export const PublicRouter = () => {
   return (
@@ -26,6 +27,7 @@ export const PublicRouter = () => {
         <Route path="resDes" element={<ResourceDesign />} />
         <Route path="contact" element={<Contact />} />
         <Route path="SearchPage" element={<SearchPage />} />  
+        <Route path="projects" element={<Projects />} />  
 
         <Route path="teamMember/:id" element={<TeamMember />} />     
         <Route path="coursePage/:id" element={<CoursePage />} />        

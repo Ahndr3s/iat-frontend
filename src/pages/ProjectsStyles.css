@@ -1,0 +1,28 @@
+.stage-container {
+  margin-top: 2vw;
+  padding-left: 17vw;
+  padding-right: 17vw;
+}
+
+.stage-desc {
+  padding-top: 2vw;
+}
+
+.stage-title {
+  display: flex;
+  font-size: larger;
+}
+
+.stage-phase,
+.stage-name {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  padding: 0.1rem;
+  width: max-content;
+  border-radius: 10px;
+  margin-right: 1vw;
+}
+
+.stage-phase {
+  text-align: center;
+}

@@ -1,7 +1,7 @@
 import { contents } from "../../assets/data/content";
 
 export const getContentsByType = (contentType, collection = contents, limit) => {
-  const types = ["1", "2", "3", '4'];
+  const types = ["1", "2", "3", '4','5'];
   let filteredContents
 
 

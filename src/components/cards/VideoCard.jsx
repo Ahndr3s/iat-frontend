@@ -13,6 +13,7 @@ export const VideoCard = (props) => {
   const [deletingmodal, setdeletingModal] = useState(false);
   const { status } = useAuthStore();
 
+  // console.log(props)
   // VIDEOBLOG LINK
   const handleVideoblogClick = (url) => {
     window.open(url);
@@ -47,8 +48,9 @@ export const VideoCard = (props) => {
 
   return (
     <div
-      className="videoblog-banner-card"
-      style={{ backgroundImage: `url(${props.img})` }}
+      className="videoblog-banner-card bg-cover h-64"
+      // style={{ backgroundImage: `url(${props.img})` }}
+      style={{ backgroundImage: `url(../../../assets/${props.img}.png)`}}
       {...(status !== "Authenticated" && {
         onClick: () => handleVideoblogClick(props.url),
       })}

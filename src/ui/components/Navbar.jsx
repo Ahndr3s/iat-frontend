@@ -98,6 +98,15 @@ export const Navbar = () => {
                 <span>Contacto</span>
               </NavLink>
             </li>
+            
+            <li className="py-3 md:py-0" onClick={handleShowNavbar}>
+              <NavLink
+                className="text-[var(--text-primary)] no-underline opacity-75 hover:opacity-100 transition-opacity text-base"
+                to={"/projects"}
+              >
+                <span>Proyectos</span>
+              </NavLink>
+            </li>
 
             {status === "Authenticated" && (
               <li className="py-3 md:py-0 text-[var(--text-primary)] font-medium">

@@ -91,6 +91,27 @@
   justify-content: space-evenly;
 }
 
+/* -------------------videoCards starts------------------- */
+.videoblog-banner-card {
+  height: 260px;
+  width: 790px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  background-size: cover; /* Escala la imagen para que quepa completa */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen dentro del div */
+  flex-direction: column;
+}
+
+.videoblog-banner-card {
+  font-size: 20px;
+  color: #cca1dc;
+}
+/* -------------------videoCards endss------------------- */
+
 /*Responsive courses styles starts*/
 @media only screen and (max-width: 600px) {
 

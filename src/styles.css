@@ -115,24 +115,7 @@ textarea {
   justify-content: space-evenly;
 }
 
-.headlights .videoblog-banner-card {
-  height: 260px;
-  width: 790px;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  background-size: cover; /* Escala la imagen para que quepa completa */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center; /* Centra la imagen dentro del div */
-  flex-direction: column;
-}
 
-.videoblog-banner-card {
-  font-size: 20px;
-  color: #cca1dc;
-}
 /*----------------News Banner styles ends----------------*/
 
 /*----------------InstMatrix styles starts----------------*/
@@ -270,19 +253,19 @@ textarea {
     height: unset;
   }
 
-  .videoblog-banner-card {
+  /* .videoblog-banner-card {
     width: 170px;
     height: 100px;
-  }
+  } */
 
-  .categorie .videoblog-banner-card {
+  /* .categorie .videoblog-banner-card {
     width: 280px;
     height: 400px;
-  }
+  } */
 
-  .videoblog-banner-card {
+  /* .videoblog-banner-card {
     font-size: 15px;
-  }
+  } */
   /*----------------Responsive News Banner styles ends----------------*/
 
   /*----------------Course Dialog styles starts----------------*/
