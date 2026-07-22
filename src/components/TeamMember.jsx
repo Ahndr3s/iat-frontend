@@ -25,30 +25,32 @@ export const TeamMember = () => {
       <div className="wrapper mt-14">
         <div className="page-header">
           <div className="team-titles pb-2">
-            <h1 className="team-name">{consultor.name}</h1>
-            <h5>
-              <FontAwesomeIcon icon={faEnvelope} /> {consultor.email}
-            </h5>
-            <h3 className="team-title">{consultor.title}</h3>
+            <h1 className="team-name text-[64px] my-18">{consultor.name}</h1>
+            <div className="pl-7 pt-2">
+              <h5>
+                <FontAwesomeIcon icon={faEnvelope} /> {consultor.email}
+              </h5>
+              <h3 className="team-title">{consultor.title}</h3>
+            </div>
           </div>
         </div>
 
         <div className="instructor-info grid grid-cols-1 md:grid-cols-2">
-        <img
-          src={`../../assets/${consultor.img}.png`}
-          className="team-img w-5rem h-8rem mt-9 justify-self-center"
-        />
-        <div className="info-container">
-          <div className="team-member-info">
-            {consultor.resume.map((info) => {
-              return (
-                <p key={info} className="team-mem-info">
-                  {info}
-                </p>
-              );
-            })}
+          <img
+            src={`../../assets/${consultor.img}.png`}
+            className="team-img w-5rem h-8rem mt-9 justify-self-center rounded-xl"
+          />
+          <div className="info-containe rmt-0">
+            <div className="team-member-info">
+              {consultor.resume.map((info) => {
+                return (
+                  <p key={info} className="team-mem-info">
+                    {info}
+                  </p>
+                );
+              })}
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </>

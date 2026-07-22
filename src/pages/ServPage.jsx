@@ -10,17 +10,22 @@ export const ServPage = forwardRef((props, ref) => {
   return (
     <>
       <div className="serv-title mt-25" ref={ref}>
-        <h1 className="titles text-2xl mb-8">Consultoría en Gestión Escolar</h1>
+        <h1 className="page-title text-5xl py-4 text-center mb-8">
+          Consultoría en Gestión Escolar
+        </h1>
       </div>
 
       <div className="home-txt">
         <p className="home-p text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
-          En IA Tutores, fusionamos tecnología de vanguardia, como la
-          Inteligencia Artificial, con métodos de educación docente probados
-          para ofrecer soluciones innovadoras a instituciones educativas.
-          Nuestro enfoque se centra en optimizar la gestión escolar para mejorar
-          los resultados académicos y promover un entorno de aprendizaje
-          efectivo.
+          En{" "}
+          <span className="iat-highlight">
+            <span>IA</span> <span>TUTORES</span>
+          </span>
+          , fusionamos tecnología de vanguardia, como la Inteligencia
+          Artificial, con métodos de educación docente probados para ofrecer
+          soluciones innovadoras a instituciones educativas. Nuestro enfoque se
+          centra en optimizar la gestión escolar para mejorar los resultados
+          académicos y promover un entorno de aprendizaje efectivo.
         </p>
       </div>
 

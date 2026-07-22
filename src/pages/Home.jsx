@@ -21,7 +21,13 @@ export const Home = () => {
     <>
       <div className="titles-container mt-8 md:mt-19">
         <h1 className="titles text-lg pb-[2] pt-[4]">
-          Bienvenido a <p className="typing">IA TUTORES</p>
+          Bienvenido a{" "}
+          <p className="typing">
+            {" "}
+            <span className="iat-highlight">
+              <span>IA</span> <span>TUTORES</span>
+            </span>{" "}
+          </p>
         </h1>
         <p className="titles text-xl text pb-[6]">
           Reinventamos el camino hacia la excelencia educativa.
@@ -29,11 +35,15 @@ export const Home = () => {
       </div>
 
       <div className="home-txt pt-5">
-        <h2 className="home-title text-2xl py-3">Conoce a IA Tutores</h2>
+        {/* <h2 className="home-title text-2xl py-3">C.onoce a IA Tutores</h2> */}
         <p className="home-p text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
-          Somos IA tutores, una empresa dedicada al coaching educativo. Nuestro
-          compromiso es brindar un servicio de calidad que potencie el
-          desarrollo académico y personal de maestros y estudiantes.
+          Somos{" "}
+          <span className="iat-highlight">
+            <span>IA</span> <span>TUTORES</span>
+          </span>{" "}
+          una empresa dedicada al coaching educativo. Nuestro compromiso es
+          brindar un servicio de calidad que potencie el desarrollo académico y
+          personal de maestros y estudiantes.
         </p>
         <br />
         <p className="home-p pb-4 text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
@@ -45,8 +55,12 @@ export const Home = () => {
         </p>
 
         <p className="home-p text-xl mx-12 md:ml-45 md:mr-45 lg:ml-45 lg:mr-45">
-          En IA Tutores, más que una empresa, somos una comunidad dedicada al
-          triunfo educativo.
+          En{" "}
+          <span className="iat-highlight">
+            <span>IA</span> <span>TUTORES</span>
+          </span>{" "}
+          más que una empresa, somos una comunidad dedicada al triunfo
+          educativo.
         </p>
       </div>
 

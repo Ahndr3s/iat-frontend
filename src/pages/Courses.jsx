@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 // import { useAuthStore } from "../hooks/useAuthStore";
 // import { Slider } from "../components/Slider";
 // import { NewsBanner } from "../components/NewsBanner";
 // import { Modal } from "../components/Modal";
+import { useEffect } from "react";
 import { useCourseStore } from "../hooks/useCourseStore";
 import { useVideoStore } from "../hooks/useVideoStore";
 
@@ -26,7 +27,7 @@ export const Courses = () => {
   const cards = getContentsByType("2");
   const videos = getContentsByType("4");
   // console.log(cards);
-  console.log(videos);
+  // console.log(videos);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -52,7 +53,9 @@ export const Courses = () => {
 
   return (
     <>
-      <h1 className="page-title mt-25">Cursos y Talleres</h1>
+      <h1 className="page-title text-5xl py-4 text-center mt-25">
+        Cursos y Talleres
+      </h1>
 
       <div className="banner">
         <h3 className="c-subtitle text-2xl my-5">Nuevos Lanzamientos</h3>

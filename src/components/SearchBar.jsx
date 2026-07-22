@@ -10,15 +10,15 @@ import { contents } from "../../assets/data/content";
 export const SearchBar = () => {
   const { videos } = useVideoStore();
   const { courses } = useCourseStore();
-  const data = contents.concat(courses.concat(videos))
-  // console.log(data)
+  const data = contents.concat(courses.concat(videos));
+  console.log(courses);
   let cardOption;
   const navigate = useNavigate();
   const location = useLocation();
   const { q = "" } = queryString.parse(location.search);
   const searches = getContentByName(q, data);
   const { searchText, onInputChange } = useForm({
-    searchText: q
+    searchText: q,
   });
   const ShowSearch = q.length === 0;
   const ShowError = q.length > 0 && searches.length === 0;
@@ -56,24 +56,24 @@ export const SearchBar = () => {
           Contenido No Encontrado
         </div>
         {searches.map((content) => {
-          if(content.type === '2') {
+          if (content.type === "2") {
             cardOption = (
               <Card
-                style={{marginLeft: '2rem'}}
+                style={{ marginLeft: "2rem" }}
                 type={Number(content.type)}
                 id={content.id}
                 key={content.id}
-                title={content.name}              
+                title={content.name}
                 Coursedata={content.Coursedata}
                 img={content.img}
                 btntxt={content.btntxt}
                 resume={content.resume}
               />
-            )
+            );
           } else {
             cardOption = (
               <Card
-                style={{marginLeft: '2rem'}}
+                style={{ marginLeft: "2rem" }}
                 type={Number(content.type)}
                 id={content.id}
                 key={content.id}
@@ -82,11 +82,9 @@ export const SearchBar = () => {
                 resume={content.resume}
                 btntxt={"Cónocenos"}
               />
-            )
+            );
           }
-          return (
-            cardOption
-          );
+          return cardOption;
         })}
       </div>
     </div>

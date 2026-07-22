@@ -13,9 +13,11 @@ export const Contact = () => {
 
   return (
     <>
-      <h1 className="page-title pt-25">Contáctanos</h1>
+      <h1 className="page-title text-5xl py-4 text-center pt-25">
+        Contáctanos
+      </h1>
       <div className="socials-container">
-        <h2 className="socials-subtitle text-2xl">Únete a la comunidad</h2>
+        <h2 className="socials-subtitle text-5xl">Únete a la comunidad</h2>
         <div className="socials-icons">
           <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="3x" />
@@ -29,8 +31,10 @@ export const Contact = () => {
         </div>
       </div>
 
-      <h2 className="text-2xl p-4 md:mx-8">Casos de éxito</h2>
-      <div className="testimony-container">
+      <h2 className="testimonies-header text-4xl mb-16 md:ml-32">
+        Casos de éxito
+      </h2>
+      <div className="testimony-container mb-12">
         <div className="testimony-res">
           <img
             className="res-img max-w-sm h-48 rounded-t-lg"

@@ -1,28 +1,27 @@
-.stage-container {
-  margin-top: 2vw;
-  padding-left: 17vw;
-  padding-right: 17vw;
-}
-
-.stage-desc {
-  padding-top: 2vw;
-}
-
-.stage-title {
-  display: flex;
-  font-size: larger;
-}
-
-.stage-phase,
-.stage-name {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  padding: 0.1rem;
-  width: max-content;
+.project-title,
+.project-subtitle {
+  width: fit-content;
   border-radius: 10px;
-  margin-right: 1vw;
 }
 
-.stage-phase {
-  text-align: center;
+.project-title {
+  background: var(--bg-primary);
+  color: #f9f9f9;
+}
+
+.project-subtitle {
+  background: linear-gradient(90deg, #b3d9d7, #87e0f7);
+  color: var(--bg-primary);
+}
+
+.project-desc {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.project-container :nth-child(even) {
+  animation: SlideRight 1s ease-out forwards;
+}
+
+.project-container :nth-child(odd) {
+  animation: slideLeft 1s ease-out forwards;
 }

@@ -97,6 +97,18 @@
   width: 80px;
 }
 
+.socials-container {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.testimonies-header {
+  animation: slideRight 1s ease-out forwards;
+}
+
+.testimony-container {
+  animation: slideRight 2s ease-out forwards;
+}
+
 @media only screen and (max-width: 600px) {
   .p-contact {
     margin-left: 2rem;

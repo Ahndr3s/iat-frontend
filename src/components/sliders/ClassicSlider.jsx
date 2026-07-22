@@ -10,7 +10,7 @@ import { VideoCard } from "../cards/VideoCard";
 
 // import { getContentsByType } from '../../helpers/getContents';
 
-export const ClassicSlider = ({ cardType, cards, limit }) => {
+export const ClassicSlider = ({ cardType, cards, limit, imgUrl }) => {
   const [card, setCard] = useState(0);
   const sliderRef = useRef(null);
   let index;
@@ -41,6 +41,7 @@ export const ClassicSlider = ({ cardType, cards, limit }) => {
       />
       <div ref={sliderRef} key={index} className="slide">
         {cards.map((card, index) => {
+          // for CourseCards
           if (cardType === 2) {
             return (
               <CourseCard
@@ -54,10 +55,11 @@ export const ClassicSlider = ({ cardType, cards, limit }) => {
                 user={card.user}
                 resume={card.resume}
                 instructor={card.instructor}
-                className="!w-[280px] !min-w[280px] md:!w-[520px] mx-1 flex-shrink-0"
+                className="w-70! !min-w[280px] md:w-130! mx-1 shrink-0"
               />
             );
           }
+          // for VideoCards
           if (cardType === 4) {
             return (
               <VideoCard
@@ -68,8 +70,24 @@ export const ClassicSlider = ({ cardType, cards, limit }) => {
                 img={card.img}
                 url={card.url}
                 user={card.user}
-                className="!w-[280px] !min-w[280px] md:!w-[520px] mx-1 flex-shrink-0"
+                className="w-70! !min-w[280px] md:w-130! mx-1 shrink-0"
               />
+            );
+          }
+          // for static Images
+          if (cardType === 5) {
+            // console.log(imgUrl + card);
+            return (
+              <div
+                key={index}
+                className="w-full min-w-full h-62.5 md:h-105 shrink-0 px-1"
+              >
+                <img
+                  src={`${imgUrl}${card}.png`}
+                  alt="Project slide"
+                  className="w-full h-full rounded-lg object-cover shadow-sm"
+                />
+              </div>
             );
           }
         })}
@@ -88,4 +106,5 @@ ClassicSlider.propTypes = {
   cardType: PropTypes.number,
   cards: PropTypes.any,
   limit: PropTypes.number,
+  imgUrl: PropTypes.string,
 };

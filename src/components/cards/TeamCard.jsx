@@ -14,8 +14,8 @@ export const TeamCard = (props) => {
   };
 
   return (
-    <div className={`team-card ${props.className || ""}`}>
-      <h2 className="team-name pb-3">{props.title}</h2>
+    <div className={`team-card md:w-[40vw] ${props.className || ""}`}>
+      <h2 className="team-name mb-3">{props.title}</h2>
       <div className="team-card-body">
         <img className="team-card-img md:max-w-xs lg:max-w-xs" src={imgUrl} />
         <div className="team-data">
@@ -23,7 +23,7 @@ export const TeamCard = (props) => {
             {props.resume}
           </p>
           <button
-            className="serv-btn mt-4 w-sm md:ml-5 lg:ml-5 border-2 border-white rounded-full text-white font-medium hover:bg-white hover:text-pink-200 transition-colors duration-300 cursor-pointer"
+            className="serv-btn mt-4  md:ml-5 lg:ml-5 border-2 border-white rounded-full text-white font-medium hover:bg-white hover:text-pink-200 transition-colors duration-300 cursor-pointer"
             onClick={() => handleClickTeamMember(props.id)}
           >
             {props.btntxt}

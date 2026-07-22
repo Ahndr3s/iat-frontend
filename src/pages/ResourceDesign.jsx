@@ -32,7 +32,9 @@ export const ResourceDesign = forwardRef((props, ref) => {
   return (
     <>
       <div className="serv-title mt-25" ref={ref}>
-        <h1 className="titles text-2xl mb-8">Diseño de Recursos Educativos</h1>
+        <h1 className="page-title text-5xl py-4 text-center mb-8">
+          Diseño de Recursos Educativos
+        </h1>
       </div>
 
       <div className="home-txt">

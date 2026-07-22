@@ -31,6 +31,7 @@
 .card-container {
   row-gap: 2rem;
   margin-bottom: 4rem;
+  justify-items: center;
 }
 
 .card-container div:nth-child(2n + 1) {
@@ -52,13 +53,16 @@
   background-clip: padding-box, border-box;
   border-radius: 15px;
   height: 420px;
-  animation: fadeIn 1.5s ease-out forwards;
 }
 
 .team-name {
   margin-left: 2rem;
   margin-bottom: 0%;
   margin-top: 1rem;
+  background: linear-gradient(90deg, #b3d9d7, #87e0f7);
+  color: var(--bg-primary);
+  width: max-content;
+  border-radius: 10px;
 }
 
 .team-card-body {
@@ -70,10 +74,11 @@
   height: 18rem;
   border-radius: 5%;
   margin-left: 1rem;
-  margin-top: 0%;
+  margin-top: 1rem;
 }
 
 .team-data {
+  margin-top: 1rem;
   display: grid;
   font-size: medium;
   justify-content: center;
@@ -83,6 +88,19 @@
 .p-resume {
   margin-left: 1rem;
   margin-right: 3rem;
+}
+
+.team-card:nth-child(even) {
+  animation: slideLeft 1s ease-out forwards;
+}
+
+.team-card:nth-child(odd) {
+  animation: slideRight 1s ease-out forwards;
+}
+
+.text-info,
+.team-container {
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 @media only screen and (max-width: 600px) {

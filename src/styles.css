@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 body {
-  /* margin: 0; */
   background: linear-gradient(#601875, #102172);
 }
 
@@ -18,15 +17,28 @@ body {
   --bg-primary: #242424;
   --bg-secondary: #141418;
   --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 120, 246, 0.87);
   --transition-speed: 600ms;
 }
 
+.iat-highlight {
+  background-color: #141418;
+  font-weight: bold;
+  border-radius: 10%;
+}
+.iat-highlight :first-child {
+  color: #2596be;
+}
+.iat-highlight :last-child {
+  color: #f9f9f9;
+}
+
 .page-title {
-  text-align: center;
-  font-size: 35px;
-  line-height: 1;
-  color: #fff;
-  letter-spacing: 10px;
+  background: linear-gradient(90deg, #b3d9d7, #87e0f7);
+  color: var(--bg-primary);
+  width: fit-content;
+  justify-self: center;
+  height: auto;
 }
 
 /*----------------Form styles stars----------------*/
@@ -39,7 +51,6 @@ form input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
-  /* width: 20%; */
   margin: 8px 0;
   background-color: aliceblue;
   color: black;
@@ -93,30 +104,6 @@ textarea {
 }
 
 /*----------------Common card styles ends----------------*/
-
-
-
-/*----------------News Banner styles starts----------------*/
-
-.banner-grid {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  justify-self: center;
-}
-
-.main-headlight {
-  width: 805px;
-  height: 540px;
-}
-
-.headlights {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-
-/*----------------News Banner styles ends----------------*/
 
 /*----------------InstMatrix styles starts----------------*/
 .instMatrix-container {
@@ -238,35 +225,6 @@ textarea {
     height: 100px;
   }
   /*-----Responsive Form ends-----*/
-
-
-  /*----------------Responsive News Banner styles starts----------------*/
-  .banner-grid {
-    display: grid;
-    justify-content: center;
-    margin-bottom: 2rem;
-    max-width: 380px;
-  }
-
-  .main-headlight {
-    width: 380px;
-    height: unset;
-  }
-
-  /* .videoblog-banner-card {
-    width: 170px;
-    height: 100px;
-  } */
-
-  /* .categorie .videoblog-banner-card {
-    width: 280px;
-    height: 400px;
-  } */
-
-  /* .videoblog-banner-card {
-    font-size: 15px;
-  } */
-  /*----------------Responsive News Banner styles ends----------------*/
 
   /*----------------Course Dialog styles starts----------------*/
   .course-dialog {

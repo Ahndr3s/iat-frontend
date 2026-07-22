@@ -12,6 +12,7 @@ import { TeamMember } from "../../components/TeamMember";
 import { SearchPage } from "../SearchPage";
 import { Contact } from "../Contact";
 import { Projects } from "../Projects";
+import { InspirAccion } from "../InspirAccion";
 
 export const PublicRouter = () => {
   return (
@@ -22,15 +23,16 @@ export const PublicRouter = () => {
         <Route path="courses" element={<Courses />} />
         <Route path="blog" element={<Blog />} />
         <Route path="about" element={<About />} />
-        <Route path="profile" element={<Profile />} />        
+        <Route path="profile" element={<Profile />} />
         <Route path="servPage" element={<ServPage />} />
         <Route path="resDes" element={<ResourceDesign />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="SearchPage" element={<SearchPage />} />  
-        <Route path="projects" element={<Projects />} />  
+        <Route path="SearchPage" element={<SearchPage />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="inspirAccion" element={<InspirAccion />} />
 
-        <Route path="teamMember/:id" element={<TeamMember />} />     
-        <Route path="coursePage/:id" element={<CoursePage />} />        
+        <Route path="teamMember/:id" element={<TeamMember />} />
+        <Route path="coursePage/:id" element={<CoursePage />} />
         <Route path="/" element={<Navigate to={"home"} />} />
       </Routes>
     </>

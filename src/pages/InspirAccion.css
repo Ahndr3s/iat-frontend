@@ -1,0 +1,24 @@
+.inspo-desc {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.hosts-container:nth-child(odd) {
+  animation: slideLeft 1s ease-out forwards;
+}
+
+.hosts-container:nth-child(even) {
+  animation: slideRight 1s ease-out forwards;
+}
+
+/* .scroll-animate {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.scroll-animate.animate-in:nth-child(odd) {
+  animation: slideLeft 1s ease-out forwards;
+}
+
+.scroll-animate.animate-in:nth-child(even) {
+  animation: slideRight 1s ease-out forwards;
+} */

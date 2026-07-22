@@ -48,9 +48,9 @@ export const Card = forwardRef((props, ref) => {
   // };
 
   // VIDEOBLOG LINK
-  const handleVideoblogClick = (url) => {
-    window.open(url);
-  };
+  // const handleVideoblogClick = (url) => {
+  //   window.open(url);
+  // };
 
   // SERVICES WINDOW
   // const handleClickServ = () => {
