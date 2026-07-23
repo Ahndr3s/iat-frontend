@@ -33,37 +33,11 @@
   justify-content: space-evenly;
 }
 
-.testimony-quote,
-.testimony-res {
-  font-size: x-large;
+.testimony-quote {
   width: 552px;
   height: 750px;
-  border-color: #fff;
   border-radius: 20px;
-  display: inherit;
-  justify-content: center;
-}
-
-.testimony-res {
-  background: linear-gradient(135deg, #102172 35%, #601875);
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.res-title {
-  font-weight: bold;
-}
-
-.res-date {
-  font-size: medium;
-}
-
-.testimony-quote {
   background: linear-gradient(-135deg, #5760a3 35%, #601875);
-  font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,15 +100,9 @@
     flex-direction: column;
   }
 
-  .testimony-quote,
-  .testimony-res {
+  .testimony-quote {
     width: fit-content;
     height: 580px;
-  }
-
-  .testimony-res {
-    flex-direction: unset;
-    margin-bottom: 1rem;
   }
 
   .quoted {

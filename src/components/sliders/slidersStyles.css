@@ -38,11 +38,11 @@
 }
 /*----------------Slider styles ends----------------*/
 
-/*--------------  AutoSlider styles------------*/
+/*--------------  AutoSlider styles starts------------*/
 .auto-slider {
   position: relative;
   width: 100%;
-  /* height: 530px; */
+  height: 530px;
   overflow: hidden;
 }
 
@@ -50,7 +50,9 @@
   display: flex;
   width: 100%;
 }
+/*----------------autoslider styles ends----------------*/
 
+/*--------------  AutoSlider T1 styles starts------------*/
 .slideAutoT1 {
   min-width: 100%;
   width: 100%;
@@ -79,4 +81,50 @@
 .dot.active {
   background-color: black;
 }
-/*----------------autoslider styles ends----------------*/
+/*--------------  AutoSlider T1 styles ends------------*/
+
+/*--------------  AutoSlider T2 styles starts------------*/
+.slideAutoT2 {
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* Contenedor horizontal que distribuye el grupo de 4 */
+.testimonial-grid-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho en PC para mantener la estética */
+  gap: 15px; /* Espaciado entre bloques */
+  height: 400px; /* Altura base fija para equilibrar las tarjetas full y medias */
+}
+
+/* Espacio asignado para las tarjetas 1 y 4 (Longitud completa) */
+.testimonial-full-width {
+  flex: 2; /* Ocupa el doble de espacio horizontal */
+  height: 100%;
+}
+
+/* Bloque vertical para las tarjetas 2 y 3 */
+.testimonial-flex-vertical {
+  flex: 1; /* Ocupa la mitad del espacio horizontal de una full */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  height: 100%; /* Mide exactamente lo mismo que las tarjetas completas colindantes */
+}
+
+/* Tarjetas internas divididas equitativamente a la mitad */
+.testimonial-half-height {
+  height: calc(50% - 7.5px); /* Mitad exacta restando la mitad del gap */
+  width: 100%;
+}
+
+/*--------------  AutoSlider T2 styles ends------------*/

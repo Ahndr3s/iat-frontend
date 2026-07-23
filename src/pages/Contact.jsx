@@ -5,11 +5,10 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import { testimonials } from "../../assets/data/testimonials";
-import { TestimonialCard } from "../components/cards/TestimonialCard";
+// import { TestimonialCard } from "../components/cards/TestimonialCard";
 import { getContentsByType } from "../helpers/getContents";
 import { AutoSlider } from "../components/sliders/AutoSlider";
 import "./ContactStyles.css";
-
 
 export const Contact = () => {
   const instagramUrl = "https://www.instagram.com/iatutores/";
@@ -48,7 +47,7 @@ export const Contact = () => {
           name={commens[0].name}
           quote={commens[0].quote}
         /> */}
-      <AutoSlider sliderType={2} cards={commens} />
+        <AutoSlider sliderType={2} cards={commens} />
       </div>
     </>
   );
