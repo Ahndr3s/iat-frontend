@@ -5,7 +5,7 @@ export const getContentsByType = (
   collection = contents,
   limit,
 ) => {
-  const types = ["1", "2", "3", "4", "5"];
+  const types = ["1", "2", "3", "4", "5", "7"];
   let filteredContents;
 
   if (!types.includes(String(contentType))) {

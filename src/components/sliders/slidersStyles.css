@@ -38,7 +38,7 @@
 }
 /*----------------Slider styles ends----------------*/
 
-/*--------------  AUtoSlider styles------------*/
+/*--------------  AutoSlider styles------------*/
 .auto-slider {
   position: relative;
   width: 100%;
@@ -51,7 +51,7 @@
   width: 100%;
 }
 
-.slideT2 {
+.slideAutoT1 {
   min-width: 100%;
   width: 100%;
   display: flex;
@@ -80,25 +80,3 @@
   background-color: black;
 }
 /*----------------autoslider styles ends----------------*/
-
-/*Responsive courses styles starts*/
-@media only screen and (max-width: 600px) {
-  .slide {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .slide .course-card {
-    align-items: center;
-    margin: 3%;
-  }
-
-  .slide .videoblog-banner-card {
-    min-width: 268px;
-    height: 260px;
-    margin-bottom: 1rem;
-    border-radius: 15px;
-    margin-left: 2rem;
-    align-self: center;
-  }
-}

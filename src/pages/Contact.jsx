@@ -4,12 +4,20 @@ import {
   faYoutube,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import { testimonials } from "../../assets/data/testimonials";
+import { TestimonialCard } from "../components/cards/TestimonialCard";
+import { getContentsByType } from "../helpers/getContents";
+import { AutoSlider } from "../components/sliders/AutoSlider";
 import "./ContactStyles.css";
+
 
 export const Contact = () => {
   const instagramUrl = "https://www.instagram.com/iatutores/";
   const facebookUrl = "https://www.facebook.com/iatutores?mibextid=ZbWKwL";
   const youtubekUrl = "https://www.youtube.com/@IATutores";
+
+  const commens = getContentsByType("7", testimonials);
+  // console.log(commens);
 
   return (
     <>
@@ -35,37 +43,12 @@ export const Contact = () => {
         Casos de éxito
       </h2>
       <div className="testimony-container mb-12">
-        <div className="testimony-res">
-          <img
-            className="res-img max-w-sm h-48 rounded-t-lg"
-            src="https://res.cloudinary.com/dfpbzr7n0/image/upload/v1732864871/gzenotjwhjb8cssi0qrx.png"
-          />
-          <div className="res-header mx-8">
-            <p className="res-title mt-3">
-              Conoce a Gaby Lemus, estudiante de Medicina
-            </p>
-            <p className="res-date mb-3">Septiembre 2024</p>
-            <p className="res-txt text-xl">
-              Gaby Lemus, aficionada del diseño UX/UI, ha revolucionado su
-              enfoque creativo tras completar nuestro curso de automatización en
-              la vida diaria.
-            </p>
-          </div>
-        </div>
-        <div className="testimony-quote">
-          <p className="t-quote">
-            "Una sesión productiva y de aprendizaje; los agentes educativos
-            necesitamos actualizarnos en el uso de la tecnología."
-          </p>
-          <div className="quoted ml-4">
-            <p className="quoted-txt">Gaby Lemus // México</p>
-            <img
-              className="quoted-img"
-              src="https://scontent.fgdl3-1.fna.fbcdn.net/v/t39.30808-6/470234875_8165233976911167_4241629748937989963_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=EQOTKJ9S70MQ7kNvgE_eI_h&_nc_oc=Adh3-jexupwMfRHPtfNKHCaR6AaxzhGy0Is2p3z7A8ExEOr27mBu4bHp76k8KABNx-abpXMKnUZt2u8jW90uXOl2&_nc_zt=23&_nc_ht=scontent.fgdl3-1.fna&_nc_gid=A-seYSDxnS0AiRMdS4phYM_&oh=00_AYCX64DnlPQtMB8BUS9H9ORMGpdZgCzXD77uFIB0mwJ4DQ&oe=6770FBF6"
-              alt=""
-            />
-          </div>
-        </div>
+        {/* <TestimonialCard
+          id={commens[0].id}
+          name={commens[0].name}
+          quote={commens[0].quote}
+        /> */}
+      <AutoSlider sliderType={2} cards={commens} />
       </div>
     </>
   );

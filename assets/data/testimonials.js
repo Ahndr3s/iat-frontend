@@ -1,0 +1,14 @@
+export const testimonials = [
+    {type:"7", id:"t1", name:"Cinthya Mata", quote:"Que gran iniciativa, me siento super honrada y agradecida con todo el equipo de IA tutores por abrir estos espacios no solo para el reconocimiento docente, sino también para la inspiración entre colegas para aprender todos de todos, pero sobre todo para brindar más oportunidades de aprendizaje a nuestros alumnos, no solo con grandes ideas, también con el corazón "},
+    {type:"7", id:"t2", name:"Oly Ramirez", quote:"Gracias por el espacio en este proyecto IA tutores, muy satisfactorio el poder compartir mi experiencia con tantos colegas"},
+    {type:"7", id:"t3", name:"Monxerrat Guanajuato", quote:"Excelente, me llevo herramientas súper prácticas y aplicables a la vida real"},
+    {type:"7", id:"t4", name:"Mily Ramirez", quote:"Super bien taller, con mucha información que apoya en gran medida la labor del docente, sobretodo para hacer material atractivo y lúdico para los alumnos"},
+    {type:"7", id:"t5", name:"Ale May", quote:"Gracias por compartir este taller. Me voy con mucho aprendizaje y motivada para poder aplicarlo en mi aula. Agradezco que no nos dejen solos y que nos acompañen en este proceso. Gracias"},
+    {type:"7", id:"t6", name:"Gpe Olvera", quote:"Agradezco y felicito muchísimo a IA tutores por el taller impartido, al maestro Beto por su entusiasmo y practicidad con la que abordo el taller, v temas super innovadores y que nos sirven hoy en día. Super recomendado Responde"},
+    {type:"7", id:"t7", name:"Christian Martinez", quote:"Súper interesante el taller!!! Me agradó mucho y desearía que den más talleres tan prácticos como este. Gracias!"},
+    {type:"7", id:"t8", name:"Odin Van Damme", quote:"El curso STEAM que me proporcionaron fue una experiencia enriquecedora, combinando aprendizaje práctico y creatividad de manera dinámica. Aunque siento que es muy poco tiempo"},
+    {type:"7", id:"t9", name:"Mon Criollo", quote:"Un taller con mucha información valiosa y útil para llevarlo a la práctica, esperando que tenga continuidad para adquirir nuevas estrategias."},
+    {type:"7", id:"t10", name:"Araceli Villagomez", quote:"Excelente taller, espero la segunda parte, me llevo un aprendizaje para aplicarlo en mi y en mi salón de clases!! “Motivación para aprender, motivación para enseñar, motivada me voy."},
+    {type:"7", id:"t11", name:"Ivonne Roscas", quote:"Gracias primero por la invitación al taller. Espero que sigan haciendo estos talleres ya que son de gran utilidad"},
+    {type:"7", id:"t12", name:"Gaby Lemus", quote:"Una sesión productiva y de aprendizaje; los agentes educativos necesitamos actualizarnos en el uso de la tecnología"},
+]

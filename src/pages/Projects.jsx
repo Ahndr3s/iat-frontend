@@ -36,10 +36,11 @@ export const Projects = () => {
       </div>
 
       <div className="project-container">
-        {proj.map((project) => {
+        {proj.map((project, index) => {
           return (
             <>
               <ProjectCard
+                key={index}
                 id={project.id}
                 title={project.title}
                 subTitle={project.subTitle}

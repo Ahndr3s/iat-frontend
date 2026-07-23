@@ -59,7 +59,7 @@ export const Courses = () => {
 
       <div className="banner">
         <h3 className="c-subtitle text-2xl my-5">Nuevos Lanzamientos</h3>
-        <AutoSlider cards={cards} />
+        <AutoSlider sliderType={1} cards={cards} />
         <div className=" grid grid-cols-1 justify-items-center justify-center md:grid-cols-1">
           {/* <ContentList contentType="2" /> */}
           <ClassicSlider cardType={2} cards={cards} />

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { CourseCard } from "../cards/CourseCard";
 
-export const AutoSlider = ({ cards, limit }) => {
+export const AutoSlider = ({ sliderType, cards, limit }) => {
   let index;
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -23,27 +23,40 @@ export const AutoSlider = ({ cards, limit }) => {
   return (
     <div className="auto-slider h-132.5 md:h-97.5">
       <div className="slides">
-        {cards.map((card, index) => (
-          <div
-            key={`Sidet2${index}`}
-            className={`slideT2 ${index === currentSlide ? "active" : ""}`}
-          >
-            <CourseCard
-              id={card.id}
-              key={`t${index}`}
-              type={Number(card.type)}
-              title={card.name}
-              btntxt={card.btntxt}
-              learning={card.learning}
-              img={card.img}
-              user={card.user}
-              resume={card.resume}
-              // pitch={card.pitch}
-              instructor={card.instructor}
-              className="max-w-full md:max-w-250px"
-            />
-          </div>
-        ))}
+        {cards.map((card, index) => {
+          if(sliderType === 1) {
+            return (
+              <>
+                <div
+                  key={`slideT1${card.id}`}
+                  className={`slideAutoT1 ${index === currentSlide ? "active" : ""}`}
+                >
+                  <CourseCard
+                    id={card.id}
+                    key={`t${index}`}
+                    type={Number(card.type)}
+                    title={card.name}
+                    btntxt={card.btntxt}
+                    learning={card.learning}
+                    img={card.img}
+                    user={card.user}
+                    resume={card.resume}
+                    instructor={card.instructor}
+                    className="max-w-full md:max-w-250px"
+                  />
+                </div>
+            </>
+            )
+          }
+          
+          if(sliderType === 2){
+            return (
+              <div>
+                
+              </div>
+            )
+          }
+        })}
       </div>
 
       {/* Puntos de navegación */}
@@ -55,7 +68,7 @@ export const AutoSlider = ({ cards, limit }) => {
             onClick={() => goToSlide(index)}
           />
         ))}
-      </div>
+      </div>      
       <style>{`
             .slides {
                 display: flex;
@@ -68,6 +81,7 @@ export const AutoSlider = ({ cards, limit }) => {
 };
 
 AutoSlider.propTypes = {
+  sliderType: PropTypes.number,
   cards: PropTypes.any,
   limit: PropTypes.number,
 };
