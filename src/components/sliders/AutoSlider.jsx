@@ -108,7 +108,6 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
           ))}
       </div>
 
-      {/* REQUERIMIENTO: Puntos de navegación visibles SOLO cuando sliderType es 1 */}
       {sliderType === 1 && totalSlides > 0 && (
         <div className="dots">
           {processedCards.map((_, index) => (
@@ -124,7 +123,6 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
       <style>{`
         .slides {
           display: flex;
-          /* REQUERIMIENTO: Transición de 1.2 segundos para un deslizamiento lento */
           transition: transform 1.2s ease-in-out; 
           transform: translateX(-${currentSlide * 100}%);
         }

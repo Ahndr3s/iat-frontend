@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 export const TestimonialCard = (props) => {
   return (
     <div>
-      <div className="testimony-quote text-2xl ">
+      <div className={`testimony-quote text-2xl ${props.className}`}>
         <p className="t-quote">{props.quote}</p>
         <div className="quoted ml-4">
           <p className="quoted-txt">— {props.name}</p>

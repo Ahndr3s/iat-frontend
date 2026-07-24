@@ -35,7 +35,7 @@
 
 .testimony-quote {
   width: 552px;
-  height: 750px;
+  /* height: 750px; */
   border-radius: 20px;
   background: linear-gradient(-135deg, #5760a3 35%, #601875);
   display: flex;
