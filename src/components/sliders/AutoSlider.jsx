@@ -18,7 +18,7 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
     return chunks;
   };
 
-  // Definimos las diapositivas reales según el tipo
+  // Definimos las diapositivas a mostrar según el tipo
   const testimonialGroups =
     sliderType === 2 ? chunkArray(processedCards, 4) : [];
   const totalSlides =
@@ -30,7 +30,7 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
 
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-    }, 4000); // 4 segundos por diapositiva para una lectura cómoda
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [totalSlides]);
@@ -42,7 +42,7 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
   return (
     <div className="auto-slider h-132.5 md:h-97.5">
       <div className="slides">
-        {/* CASO sliderType === 1: Muestra tarjetas individuales de Cursos */}
+        {/* TIPO 1: Muestra tarjetas individuales*/}
         {sliderType === 1 &&
           processedCards.map((card, index) => (
             <div
@@ -64,57 +64,54 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
             </div>
           ))}
 
-        {/* CASO sliderType === 2: Muestra testimonios en grupos con diseño de cuadrícula */}
+        {/* TIPO 2: grupo de cardsen un grid */}
         {sliderType === 2 &&
+          testimonialGroups.map((group, groupIdx) => (
+            <div
+              key={`slideGroupT2-${groupIdx}`}
+              className={`w-full min-w-full flex justify-center items-center shrink-0 box-border px-5 ${groupIdx === currentSlide ? "active" : ""}`}
+            >
+              
+              {/* CONTENEDOR PRINCIPAL GRID*/}
+              <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-6 md:h-[400px] text-md md:text-lg">
+            
+                {/* COLUMNA 1*/}
+                {(group[0] || group[1]) && (
+                <div className="w-full h-full flex flex-col justify-between gap-4">
+                  {group[0] && (
+                    <div className="flex-1 min-h-[150px] md:min-h-0">
+                      <TestimonialCard {...group[0]} className="w-full h-[50%] md:h-full lg:min-h-full" />
+                    </div>
+                  )}
 
-testimonialGroups.map((group, groupIdx) => (
-  <div
-  key={`slideGroupT2-${groupIdx}`}
-  className={`w-full min-w-full flex justify-center items-center shrink-0 box-border px-5 ${
-    groupIdx === currentSlide ? "active" : ""
-  }`}
->
-  {/* CONTENEDOR PRINCIPAL GRID:
-      - Móvil: 1 columna, espacio vertical entre bloques de 24px (gap-6)
-      - PC (md): 2 columnas, espacio horizontal/vertical de 24px, altura fija de 400px */}
-  <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-6 md:h-[400px] text-md md:text-lg">
-    
-    {/* COLUMNA 1: Contiene Tarjeta 1 y Tarjeta 2 */}
-    {(group[0] || group[1]) && (
-      <div className="w-full h-full flex flex-col justify-between gap-4">
-        {group[0] && (
-          <div className="flex-1 min-h-[150px] md:min-h-0">
-            <TestimonialCard {...group[0]} className="w-full h-[50%] md:h-full lg:min-h-full" />
-          </div>
-        )}
-        {group[1] && (
-          <div className="flex-1 min-h-[150px] md:min-h-0">
-            <TestimonialCard {...group[1]} className="w-full h-[50%] md:h-full lg:min-h-full" />
-          </div>
-        )}
-      </div>
-    )}
+                  {group[1] && (
+                    <div className="flex-1 min-h-[150px] md:min-h-0">
+                      <TestimonialCard {...group[1]} className="w-full h-[50%] md:h-full lg:min-h-full" />
+                    </div>
+                  )}
+                </div>
+                )}
 
-    {/* COLUMNA 2: Contiene Tarjeta 3 y Tarjeta 4 (Se oculta en móvil si deseas solo 1 columna con 2 tarjetas) */}
-    {(group[2] || group[3]) && (
-      <div className="w-full h-full flex flex-col justify-between gap-4">
-        {group[2] && (
-          <div className="flex-1 min-h-[150px] md:min-h-0">
-            <TestimonialCard {...group[2]} className="w-full h-[50%] md:h-full lg:min-h-full" />
-          </div>
-        )}
-        {group[3] && (
-          <div className="flex-1 min-h-[150px] md:min-h-0">
-            <TestimonialCard {...group[3]} className="w-full h-[50%] md:h-full lg:min-h-full" />
-          </div>
-        )}
-      </div>
-    )}
-    
-  </div>
-</div>
-))
-}
+                {/* COLUMNA 2 */}
+                {(group[2] || group[3]) && (
+                <div className="w-full h-full flex flex-col justify-between gap-4">
+                  {group[2] && (
+                    <div className="flex-1 min-h-[150px] md:min-h-0">
+                      <TestimonialCard {...group[2]} className="w-full h-[50%] md:h-full lg:min-h-full" />
+                    </div>
+                  )}
+                  {group[3] && (
+                    <div className="flex-1 min-h-[150px] md:min-h-0">
+                      <TestimonialCard {...group[3]} className="w-full h-[50%] md:h-full lg:min-h-full" />
+                    </div>
+                  )}
+                </div>
+                )}
+
+              </div>
+            </div>
+          ))
+        }
       </div>
 
       {sliderType === 1 && totalSlides > 0 && (
