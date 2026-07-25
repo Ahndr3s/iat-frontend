@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 export const TestimonialCard = (props) => {
   return (
     <div>
-      <div className={`testimony-quote text-2xl ${props.className}`}>
-        <p className="t-quote">{props.quote}</p>
+      <div className={`testimony-quote  ${props.className}`}>
+        <p className="t-quote text-sm">{props.quote}</p>
         <div className="quoted ml-4">
           <p className="quoted-txt">— {props.name}</p>
-          <img className="quoted-img" src={""} alt="" />
+          {/* <img className="quoted-img" src={""} alt="" /> */}
         </div>
       </div>
     </div>
