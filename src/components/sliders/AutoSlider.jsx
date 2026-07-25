@@ -66,46 +66,54 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
 
         {/* CASO sliderType === 2: Muestra testimonios en grupos con diseño de cuadrícula */}
         {sliderType === 2 &&
-          testimonialGroups.map((group, groupIdx) => (
-            <div
-              key={`slideGroupT2-${groupIdx}`}
-              className={`slideAutoT2 ${groupIdx === currentSlide ? "active" : ""}`}
-            >
-              <div className="testimonial-grid-layout">
-                {/* Tarjeta 1: Longitud completa */}
-                {group[0] && (
-                  <div className="testimonial-full-width">
-                    <TestimonialCard {...group[0]} className="w-full h-full" />
-                  </div>
-                )}
+          // AutoSlider.jsx
 
-                {/* Contenedor Flex Vertical: Contiene Tarjeta 2 y Tarjeta 3 (Mitad de longitud cada una) */}
-                {(group[1] || group[2]) && (
-                  <div className="testimonial-flex-vertical">
-                    {group[1] && (
-                      <TestimonialCard
-                        {...group[1]}
-                        className="testimonial-half-height"
-                      />
-                    )}
-                    {group[2] && (
-                      <TestimonialCard
-                        {...group[2]}
-                        className="testimonial-half-height"
-                      />
-                    )}
-                  </div>
-                )}
+testimonialGroups.map((group, groupIdx) => (
+  <div
+    key={`slideGroupT2-${groupIdx}`}
+    className={`w-full min-w-full flex justify-center items-center shrink-0 box-border px-5 ${
+      groupIdx === currentSlide ? "active" : ""
+    }`}
+  >
+    {/* CONTENEDOR PRINCIPAL GRID:
+        - Móvil: 1 columna, separación de 16px (gap-4), altura adaptable.
+        - Escritorio (md): 3 columnas idénticas, altura fija de 400px. */}
+    <div className="w-full max-w-[1200px] gap-4 grid grid-cols-1 md:grid-cols-3 md:h-[400px]">
+      
+      {/* Tarjeta 1: Ocupa 1 columna exacta en PC (1/3 del total) */}
+      {group[0] && (
+        <div className="w-full h-full min-h-[250px] md:min-h-0">
+          <TestimonialCard {...group[0]} className="w-full h-full" />
+        </div>
+      )}
 
-                {/* Tarjeta 4: Longitud completa */}
-                {group[3] && (
-                  <div className="testimonial-full-width">
-                    <TestimonialCard {...group[3]} className="w-full h-full" />
-                  </div>
-                )}
-              </div>
+      {/* Contenedor central: Columna 2 en PC. Distribuye las tarjetas 2 y 3 verticalmente */}
+      {(group[1] || group[2]) && (
+        <div className="w-full h-full flex flex-col justify-between gap-4">
+          {group[1] && (
+            <div className="flex-1 min-h-[180px] md:min-h-0">
+              <TestimonialCard {...group[1]} className="w-full h-full" />
             </div>
-          ))}
+          )}
+          {group[2] && (
+            <div className="flex-1 min-h-[180px] md:min-h-0">
+              <TestimonialCard {...group[2]} className="w-full h-full" />
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Tarjeta 4: Ocupa la 3ra columna en PC. Mismo tamaño exacto que la Tarjeta 1 */}
+      {group[3] && (
+        <div className="w-full h-full min-h-[250px] md:min-h-0">
+          <TestimonialCard {...group[3]} className="w-full h-full" />
+        </div>
+      )}
+      
+    </div>
+  </div>
+))
+}
       </div>
 
       {sliderType === 1 && totalSlides > 0 && (
