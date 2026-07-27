@@ -20,7 +20,8 @@ export const CourseCard = (props) => {
 
   // COURSE INSCIPTION
   const handleClickCourse = () => {
-    window.open("https://wa.me/message/W54JEKQVCRT7J1");
+    // window.open("https://wa.me/message/W54JEKQVCRT7J1");
+    window.open("https://api.whatsapp.com/send?phone=5214771093163");
   };
 
   // COURSE WINDOW
