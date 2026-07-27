@@ -47,7 +47,7 @@ export const Contact = () => {
           name={commens[0].name}
           quote={commens[0].quote}
         /> */}
-        <AutoSlider sliderType={2} cards={commens} />
+        <AutoSlider sliderType={2} cards={commens} className={"h-190"} />
       </div>
     </>
   );

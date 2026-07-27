@@ -21,7 +21,7 @@ export const ProjectCard = (props) => {
   };
 
   return (
-    <div key={props.id} className="text-2xl my-2 flex flex-col">
+    <div className="text-2xl my-2 flex flex-col">
       <div className=" py-4 mx-10 md:mx-40 lg:mx-50 mt-2">
         <h2 className="project-title text-4xl">{props.title}</h2>
         <h3 className="project-subtitle text-2xl">{props.subTitle}</h3>
@@ -55,7 +55,7 @@ export const ProjectCard = (props) => {
         <div className="flex flex-col gap-y-4 text-justify w-full">
           {props.resume.map((parr, idx) => {
             return (
-              <p key={idx} className="">
+              <p key={`${props.id}-${idx}`} className="">
                 {parr}
               </p>
             );

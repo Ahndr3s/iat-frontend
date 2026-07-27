@@ -1,7 +1,7 @@
 export const projects = [
   {
     type: "5",
-    id: "p-1",
+    id: "1",
     title: "Espacios de Emoción",
     subTitle: "Los Sentimientos Importan",
     resume: [
@@ -14,7 +14,7 @@ export const projects = [
   },
   {
     type: "5",
-    id: "p-2",
+    id: "2",
     title: "Sistema Escolar de Regeneración Ambiental",
     subTitle: "SERA",
     resume: [
@@ -29,7 +29,7 @@ export const projects = [
   },
   {
     type: "5",
-    id: "p-3",
+    id: "3",
     title: "Un Bosque Comestible",
     subTitle: "Huerto Escolar",
     resume: [
@@ -42,7 +42,7 @@ export const projects = [
   },
   {
     type: "5",
-    id: "p-4",
+    id: "4",
     title: "Torneo Rubikfev",
     subTitle: "El Alumno Es El Mejor Maestro",
     resume: [

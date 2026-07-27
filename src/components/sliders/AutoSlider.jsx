@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { CourseCard } from "../cards/CourseCard";
 import { TestimonialCard } from "../cards/TestimonialCard";
 
-export const AutoSlider = ({ sliderType, cards = [], limit }) => {
+export const AutoSlider = ({ sliderType, cards = [], limit, className }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Si hay un límite, recortamos el arreglo primero
@@ -40,7 +40,7 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
   };
 
   return (
-    <div className="auto-slider h-132.5 md:h-97.5">
+    <div className={`auto-slider ${className}`}>
       <div className="slides">
         {/* TIPO 1: Muestra tarjetas individuales*/}
         {sliderType === 1 &&
@@ -71,47 +71,55 @@ export const AutoSlider = ({ sliderType, cards = [], limit }) => {
               key={`slideGroupT2-${groupIdx}`}
               className={`w-full min-w-full flex justify-center items-center shrink-0 box-border px-5 ${groupIdx === currentSlide ? "active" : ""}`}
             >
-              
               {/* CONTENEDOR PRINCIPAL GRID*/}
-              <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-6 md:h-[400px] text-md md:text-lg">
-            
+              <div className="w-full max-w-300 grid grid-cols-1 md:grid-cols-2 gap-6 md:h-100 text-md md:text-lg">
                 {/* COLUMNA 1*/}
                 {(group[0] || group[1]) && (
-                <div className="w-full h-full flex flex-col justify-between gap-4">
-                  {group[0] && (
-                    <div className="flex-1 min-h-[150px] md:min-h-0">
-                      <TestimonialCard {...group[0]} className="w-full h-[50%] md:h-full lg:min-h-full" />
-                    </div>
-                  )}
+                  <div className="w-full h-full flex flex-col justify-between gap-4">
+                    {group[0] && (
+                      <div className="flex-1 min-h-37.5 md:min-h-0">
+                        <TestimonialCard
+                          {...group[0]}
+                          className="w-full h-[50%] md:h-full lg:min-h-full"
+                        />
+                      </div>
+                    )}
 
-                  {group[1] && (
-                    <div className="flex-1 min-h-[150px] md:min-h-0">
-                      <TestimonialCard {...group[1]} className="w-full h-[50%] md:h-full lg:min-h-full" />
-                    </div>
-                  )}
-                </div>
+                    {group[1] && (
+                      <div className="flex-1 min-h-37.5 md:min-h-0">
+                        <TestimonialCard
+                          {...group[1]}
+                          className="w-full h-[50%] md:h-full lg:min-h-full"
+                        />
+                      </div>
+                    )}
+                  </div>
                 )}
 
                 {/* COLUMNA 2 */}
                 {(group[2] || group[3]) && (
-                <div className="w-full h-full flex flex-col justify-between gap-4">
-                  {group[2] && (
-                    <div className="flex-1 min-h-[150px] md:min-h-0">
-                      <TestimonialCard {...group[2]} className="w-full h-[50%] md:h-full lg:min-h-full" />
-                    </div>
-                  )}
-                  {group[3] && (
-                    <div className="flex-1 min-h-[150px] md:min-h-0">
-                      <TestimonialCard {...group[3]} className="w-full h-[50%] md:h-full lg:min-h-full" />
-                    </div>
-                  )}
-                </div>
+                  <div className="w-full h-full flex flex-col justify-between gap-4">
+                    {group[2] && (
+                      <div className="flex-1 min-h-37.5 md:min-h-0">
+                        <TestimonialCard
+                          {...group[2]}
+                          className="w-full h-[50%] md:h-full lg:min-h-full"
+                        />
+                      </div>
+                    )}
+                    {group[3] && (
+                      <div className="flex-1 min-h-37.5 md:min-h-0">
+                        <TestimonialCard
+                          {...group[3]}
+                          className="w-full h-[50%] md:h-full lg:min-h-full"
+                        />
+                      </div>
+                    )}
+                  </div>
                 )}
-
               </div>
             </div>
-          ))
-        }
+          ))}
       </div>
 
       {sliderType === 1 && totalSlides > 0 && (
@@ -141,4 +149,5 @@ AutoSlider.propTypes = {
   sliderType: PropTypes.number,
   cards: PropTypes.any,
   limit: PropTypes.number,
+  className: PropTypes.string,
 };

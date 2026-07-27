@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { projects } from "../../assets/data/Projects";
 import { ProjectCard } from "../components/cards/ProjectCard";
 import { getContentsByType } from "../helpers/getContents";
@@ -38,9 +39,8 @@ export const Projects = () => {
       <div className="project-container">
         {proj.map((project, index) => {
           return (
-            <>
+            <Fragment key={`P-${project.id || index}`}>
               <ProjectCard
-                key={index}
                 id={project.id}
                 title={project.title}
                 subTitle={project.subTitle}
@@ -50,7 +50,7 @@ export const Projects = () => {
                 imgUrl={"../../../assets/projectImgs/"}
               />
               <hr className="w-8/10 md:w-9/10 lg:w-9/10 mx-auto mt-8" />
-            </>
+            </Fragment>
           );
         })}
       </div>

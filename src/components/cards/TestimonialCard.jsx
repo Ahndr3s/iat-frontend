@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 
 export const TestimonialCard = (props) => {
   return (
-    <div>
-      <div className={`testimony-quote  ${props.className}`}>
-        <p className="t-quote text-sm">{props.quote}</p>
+    <div className="md:h-80">
+      <div className={`testimony-quote ${props.className}`}>
+        <p className="t-quote text-sm md:text-xl">{props.quote}</p>
         <div className="quoted ml-4">
           <p className="quoted-txt">— {props.name}</p>
           {/* <img className="quoted-img" src={""} alt="" /> */}

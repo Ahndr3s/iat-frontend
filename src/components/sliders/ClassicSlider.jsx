@@ -79,7 +79,7 @@ export const ClassicSlider = ({ cardType, cards, limit, imgUrl }) => {
             // console.log(imgUrl + card);
             return (
               <div
-                key={index}
+                key={`img-${card.id || index}`}
                 className="w-full min-w-full h-62.5 md:h-105 shrink-0 px-1"
               >
                 <img
