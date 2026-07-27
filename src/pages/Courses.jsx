@@ -111,12 +111,12 @@ export const Courses = () => {
         {/* <Slider type={1} cards={<ContentList contentType='2'/>} /> */}
         {/* <Slider type={1} cards={courses} /> */}
       </div>
-      <div className="categorie">
+      {/* <div className="categorie">
         <h4>Más Videos</h4>
         <hr />
-        {/* <Slider type={1} cards={<ContentList contentType='2'/>} /> */}
-        {/* <Slider type={1} cards={videos} /> */}
-      </div>
+        <Slider type={1} cards={<ContentList contentType='2'/>} />
+        <Slider type={1} cards={videos} />
+      </div> */}
 
       {/* <div className="categorie">
         <h4>Recomendaciones para tí</h4>
