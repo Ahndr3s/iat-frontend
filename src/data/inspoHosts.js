@@ -3,7 +3,7 @@ export const inspoHosts = [
     id: "h-olivia",
     type: "5",
     name: "Olivia",
-    img: "olivia",
+    img: "Olivia",
     bio: [
       "La participación de Olivia abrió una ventana a esas prácticas docentes que nacen de la observación atenta del aula. Su experiencia permitió reconocer que una buena intervención educativa no siempre empieza con una gran teoría, sino con una pregunta sencilla: ¿qué necesitan realmente mis estudiantes? Desde esa mirada, su ponencia mostró el valor de actuar, ajustar y construir respuestas posibles desde la realidad escolar. Fue una invitación a mirar la práctica docente como un proceso vivo, donde cada decisión puede convertirse en una oportunidad para aprender mejor.",
     ],
@@ -12,7 +12,7 @@ export const inspoHosts = [
     id: "h-laura",
     type: "5",
     name: "Laura",
-    img: "laura",
+    img: "Laura",
     bio: [
       "Laura compartió una experiencia centrada en el poder de acompañar a los estudiantes desde una práctica cercana, sensible y organizada. Su ponencia recordó que enseñar también implica construir condiciones para que niñas, niños y adolescentes se sientan vistos, escuchados y capaces de avanzar. La fuerza de su participación estuvo en mostrar que la transformación educativa ocurre cuando el docente convierte una necesidad cotidiana en una estrategia clara, replicable y con sentido humano. Su historia dejó una idea sencilla: educar también es sostener procesos.",
     ],
