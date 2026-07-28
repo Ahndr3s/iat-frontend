@@ -4,7 +4,7 @@ import {
   faYoutube,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
-import { testimonials } from "../../assets/data/testimonials";
+import { testimonials } from "../data/testimonials";
 // import { TestimonialCard } from "../components/cards/TestimonialCard";
 import { getContentsByType } from "../helpers/getContents";
 import { AutoSlider } from "../components/sliders/AutoSlider";

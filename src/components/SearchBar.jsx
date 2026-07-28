@@ -5,7 +5,7 @@ import queryString from "query-string";
 import { getContentByName } from "../helpers/getContentByName";
 import { useVideoStore } from "../hooks/useVideoStore";
 import { useCourseStore } from "../hooks/useCourseStore";
-import { contents } from "../../assets/data/content";
+import { contents } from "../data/content";
 
 export const SearchBar = () => {
   const { videos } = useVideoStore();

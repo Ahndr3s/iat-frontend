@@ -4,7 +4,7 @@ import "../pages/TeamMemberStyles.css";
 import { Navigate, useParams } from "react-router-dom";
 import { getConsultorById } from "../helpers/getConsultorById";
 import { useEffect, useMemo } from "react";
-import { consultors } from "../../assets/data/consultors";
+import { consultors } from "../data/consultors";
 
 export const TeamMember = () => {
   const { id } = useParams();

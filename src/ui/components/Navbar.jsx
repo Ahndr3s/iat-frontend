@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-import logo from "../../../assets/logo.jpg";
+import logo from "../../../public/assets/logo.jpg";
 import "./NavbarStyles.css";
 import { useAuthStore } from "../../hooks/useAuthStore";
 

@@ -5,9 +5,9 @@ import { ServCards } from "../components/cards/ServCards";
 import "./HomeStyles.css";
 import "./ResourceDesignStyles.css";
 import "./ServPageStyle.css";
-import iat_consultores from "../../assets/iat_consultores.png";
-import iat_recursos from "../../assets/iat_recursos.png";
-import iat_cursos from "../../assets/iat_cursos.png";
+const iat_consultores = "/assets/iat_consultores.png";
+const iat_recursos = "/assets/iat_recursos.png";
+const iat_cursos = "/assets/iat_cursos.png";
 
 export const Home = () => {
   const targetRef1 = useRef(null);

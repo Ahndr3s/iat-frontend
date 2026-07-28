@@ -1,4 +1,4 @@
-import { contents } from "../../assets/data/content";
+import { contents } from "../data/content";
 
 export const getContentsByType = (
   contentType,

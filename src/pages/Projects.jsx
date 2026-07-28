@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { projects } from "../../assets/data/Projects";
+import { projects } from "../data/Projects";
 import { ProjectCard } from "../components/cards/ProjectCard";
 import { getContentsByType } from "../helpers/getContents";
 import "./ProjectsStyles.css";
@@ -47,7 +47,7 @@ export const Projects = () => {
                 resume={project.resume}
                 img={project?.img}
                 videoUrl={project?.url}
-                imgUrl={"../../../assets/projectImgs/"}
+                imgUrl={"../../assets/projectImgs/"}
               />
               <hr className="w-8/10 md:w-9/10 lg:w-9/10 mx-auto mt-8" />
             </Fragment>

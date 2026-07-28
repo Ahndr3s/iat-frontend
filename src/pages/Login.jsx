@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { SimpleForm } from "../components/SimpleForm";
-import logo from "../../assets/logo.png";
+import logo from "../../public/assets/logo.png";
 import { useState } from "react";
 
 export const Login = () => {

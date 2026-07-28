@@ -1,5 +1,5 @@
-import { inspoPosts } from "../../assets/data/inspoPost";
-import { inspoHosts } from "../../assets/data/inspoHosts";
+import { inspoPosts } from "../data/inspoPost";
+import { inspoHosts } from "../data/inspoHosts";
 import { ProjectCard } from "../components/cards/ProjectCard";
 import { getContentsByType } from "../helpers/getContents";
 import "./InspirAccion.css";
