@@ -57,7 +57,7 @@ export const inspoHosts = [
     id: "h-juan-miguel",
     type: "5",
     name: "Juan Miguel",
-    img: "Juan-miguel",
+    img: "juan-miguel",
     bio: [
       "Juan Miguel presentó una experiencia que evidenció el compromiso docente con la mejora del aprendizaje. Su ponencia recuperó la importancia de diseñar estrategias que conecten con la realidad de los estudiantes y que permitan avanzar desde lo posible. La intervención mostró que una práctica educativa cobra fuerza cuando tiene claridad de propósito, seguimiento y una intención genuina de transformar la experiencia escolar. Su participación invitó a pensar que cada docente puede ser investigador de su propia aula cuando observa, adapta y comparte lo que funciona.",
     ],
